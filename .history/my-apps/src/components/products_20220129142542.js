@@ -31,7 +31,7 @@ const Products = {
             Self-Improvement
           </a>
         </h3>
-        <p class="text-base font-semibold text-gray-900">99$</p>
+        <p class="text-base font-semibold text-gray-900">Journals and note-taking</p>
       </div>
 
       <div class="group relative">
@@ -44,7 +44,7 @@ const Products = {
             Travel
           </a>
         </h3>
-        <p class="text-base font-semibold text-gray-900">99$</p>
+        <p class="text-base font-semibold text-gray-900">Daily commute essentials</p>
       </div>
     </div>
   </div>

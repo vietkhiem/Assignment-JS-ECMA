@@ -4,7 +4,6 @@ import Dashboard from "./pages/admin/dashboard";
 import AdminNewsPage from "./pages/admin/news";
 import HomePage from "./pages/home";
 import NewsPage from "./pages/news";
-import Blog from "./components/Blog";
 
 const router = new Navigo("/", { linksSelector: "a" });
 
@@ -19,6 +18,5 @@ router.on({
     "/admin/dashboard": () => print(Dashboard),
     "/admin/news": () => print(AdminNewsPage),
     "/admin/product": () => print(Dashboard),
-    "/blog": () => print(Blog),
 });
 router.resolve();

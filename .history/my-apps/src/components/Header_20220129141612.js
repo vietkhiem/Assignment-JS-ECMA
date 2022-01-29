@@ -32,12 +32,11 @@ const Header = {
         </div>
     </div>
 </div>
-        <div role="main" class="flex flex-col items-center justify-center mb-10 ">
+</main>
+        <div role="main" class="flex flex-col items-center justify-center mb-10 " style="padding-top:-100px;">
             <h1 class="text-5xl font-semibold leading-9 text-center text-gray-800 dark:text-gray-50">Trang Chủ</h1>
             <p class="text-base leading-normal text-center text-gray-600 dark:text-white mt-4 lg:w-1/2 md:w-10/12 w-11/12">If you're looking for random paragraphs, you've come to the right place. When a random word or a random sentence isn't quite enough</p>
         </div>
-</main>
-        
         `;
     },
 };

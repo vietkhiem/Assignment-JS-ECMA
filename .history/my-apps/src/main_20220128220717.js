@@ -19,6 +19,6 @@ router.on({
     "/admin/dashboard": () => print(Dashboard),
     "/admin/news": () => print(AdminNewsPage),
     "/admin/product": () => print(Dashboard),
-    "/blog": () => print(Blog),
+    "/components/blog": () => print(Blog),
 });
 router.resolve();

@@ -18,7 +18,7 @@ const Products = {
             Desk and Office
           </a>
         </h3>
-        <p class="text-base font-semibold text-gray-900">99$</p>
+        <p class="text-base font-semibold text-gray-900">Work from home accessories</p>
       </div>
 
       <div class="group relative">
@@ -31,7 +31,7 @@ const Products = {
             Self-Improvement
           </a>
         </h3>
-        <p class="text-base font-semibold text-gray-900">99$</p>
+        <p class="text-base font-semibold text-gray-900">Journals and note-taking</p>
       </div>
 
       <div class="group relative">
@@ -44,10 +44,31 @@ const Products = {
             Travel
           </a>
         </h3>
-        <p class="text-base font-semibold text-gray-900">99$</p>
+        <p class="text-base font-semibold text-gray-900">Daily commute essentials</p>
       </div>
     </div>
   </div>
+</div>
+</div>
+
+<div class="htc__brand__area bg__cat--4">
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ht__brand__inner">
+                <ul class="brand__list owl-carousel clearfix">
+                    <li><a href="#"><img src="./lib/images/brand/1.png" alt="brand ./lib/images"></a></li>
+                    <li><a href="#"><img src="./lib/images/brand/2.png" alt="brand ./lib/images"></a></li>
+                    <li><a href="#"><img src="./lib/images/brand/3.png" alt="brand ./lib/images"></a></li>
+                    <li><a href="#"><img src="./lib/images/brand/4.png" alt="brand ./lib/images"></a></li>
+                    <li><a href="#"><img src="./lib/images/brand/5.png" alt="brand ./lib/images"></a></li>
+                    <li><a href="#"><img src="./lib/images/brand/5.png" alt="brand ./lib/images"></a></li>
+                    <li><a href="#"><img src="./lib/images/brand/1.png" alt="brand ./lib/images"></a></li>
+                    <li><a href="#"><img src="./lib/images/brand/2.png" alt="brand ./lib/images"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
 </div>
         `;

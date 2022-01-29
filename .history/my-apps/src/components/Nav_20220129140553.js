@@ -3,10 +3,10 @@ const Nav = {
         return /* html */ `
         <header class="h-24 sm:h-32 flex items-center z-30 w-full">
         <div class="container mx-auto px-6 flex items-center justify-between">
-            <div class="uppercase text-gray-800 dark:text-white font-black text-3xl ml-32">
+            <div class="uppercase text-gray-800 dark:text-white font-black text-3xl ml-20">
                 <a href="index.html"><img src="./lib/images/logo/4.png" alt="logo ./lib/images"></a>
             </div>
-            <div class="flex items-center mr-24">
+            <div class="flex items-center mr-40">
                 <nav class="font-sen text-gray-800 dark:text-white uppercase text-lg lg:flex items-center hidden">
                     <a href="#" class="py-2 px-6 flex hover:text-indigo-500">
                         Home
