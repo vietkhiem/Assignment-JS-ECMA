@@ -61,6 +61,12 @@ const Products = {
 </div>
 
       <!-- End Products -->
+
+      <!-- Top Rate Start -->
+
+      <h1 role="heading" class="text-center xl:text-5xl md:text-4xl text-2xl font-bold text-gray-800 ">Top Rate</h1>
+        <p role="contentinfo" class="text-base leading-normal text-center text-gray-600 mt-4 mb-10">But I must explain to you</p>
+
         `;
     },
 };

@@ -1,4 +1,5 @@
 import Header from "../components/Header";
+import Footer form "../components/Footer";
 import Nav from "../components/Nav";
 
 const NewsPage = {
@@ -30,7 +31,7 @@ const NewsPage = {
                     </div>
                 </section>
             </div>
-            
+            ${Footer.render()}
         `;
     },
 };

@@ -5,7 +5,6 @@ import Products from "../components/products";
 import ProductsRate from "../components/ProductsRate";
 import Nav from "../components/Nav";
 import Banner from "../components/Banner";
-import Reviews from "../components/Reviews";
 
 const HomePage = {
     render() {
@@ -22,9 +21,6 @@ const HomePage = {
                 </section>
                 <section class="news">
                     ${ProductsRate.render()}
-                </section>
-                <section class="news">
-                    ${Reviews.render()}
                 </section>
                 
                 <Footer>

@@ -10,9 +10,9 @@ const Header = {
             <span class="w-20 h-2 bg-gray-800 dark:bg-white mb-12">
             </span>
             <h1 class="font-bebas-neue uppercase text-6xl sm:text-8xl font-black flex flex-col leading-none dark:text-white text-gray-800">
-                Bringing  
+                Bringing natural 
                 <span class="text-5xl sm:text-7xl">
-                Natural Beauty 
+                    Beauty 
                 </span>
             </h1>
             <p class="text-sm sm:text-base text-gray-700 dark:text-white">

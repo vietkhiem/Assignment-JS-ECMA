@@ -12,7 +12,7 @@ const Header = {
             <h1 class="font-bebas-neue uppercase text-6xl sm:text-8xl font-black flex flex-col leading-none dark:text-white text-gray-800">
                 Bringing  
                 <span class="text-5xl sm:text-7xl">
-                Natural Beauty 
+                natural    Beauty 
                 </span>
             </h1>
             <p class="text-sm sm:text-base text-gray-700 dark:text-white">

@@ -15,7 +15,7 @@ const Cart = {
                 </div>
                 <div class="flex mt-10 mb-5">
                     <h3 class="font-semibold text-gray-600 text-xs uppercase w-2/5">Product Details</h3>
-                    <h3 class="font-semibold text-center text-gray-600 text-xs uppercase w-1/5 text-center">Quantity</h3>
+                    <h3 class="font-semibold p09text-center text-gray-600 text-xs uppercase w-1/5 text-center">Quantity</h3>
                     <h3 class="font-semibold text-center text-gray-600 text-xs uppercase w-1/5 text-center">Price</h3>
                     <h3 class="font-semibold text-center text-gray-600 text-xs uppercase w-1/5 text-center">Total</h3>
                 </div>
@@ -100,7 +100,7 @@ const Cart = {
                 <div>
                     <label class="font-medium inline-block mb-3 text-sm uppercase">Shipping</label>
                     <select class="block p-2 text-gray-600 w-full text-sm">
-                    <option>Standard shipping - $10.00</option>
+                    \ư<option>Standard shipping - $10.00</option>
                     </select>
                 </div>
                 <div class="py-10">
@@ -113,7 +113,8 @@ const Cart = {
                     <span>Total cost</span>
                     <span>$600</span>
                     </div>
-                    <a href="/checkouts"><button class="bg-indigo-500 font-semibold hover:bg-indigo-600 py-3 text-sm text-white uppercase w-full">Checkout</button></a>
+                    <a href="/Checkouts
+                    "><button class="bg-indigo-500 font-semibold hover:bg-indigo-600 py-3 text-sm text-white uppercase w-full">Checkout</button></a>
 
                 </div>
                 </div>

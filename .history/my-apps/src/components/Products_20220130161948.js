@@ -2,6 +2,21 @@ const Products = {
     render() {
         return /* html */ `
 
+<!--
+  This example requires Tailwind CSS v2.0+ 
+  
+  This example requires some changes to your config:
+  
+  ```;
+        // tailwind.config.js
+        module.exports = {
+            // ...
+            plugins: [
+                // ...
+                require("@tailwindcss/aspect-ratio"),
+            ],
+        }```
+-->
 <div class="bg-white">
   <div class="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
     <h2 class="sr-only">Products</h2>
@@ -61,6 +76,12 @@ const Products = {
 </div>
 
       <!-- End Products -->
+
+      <!-- Top Rate Start -->
+
+      <h1 role="heading" class="text-center xl:text-5xl md:text-4xl text-2xl font-bold text-gray-800 ">Top Rate</h1>
+        <p role="contentinfo" class="text-base leading-normal text-center text-gray-600 mt-4 mb-10">But I must explain to you</p>
+
         `;
     },
 };

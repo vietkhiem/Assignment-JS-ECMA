@@ -113,10 +113,10 @@ const Cart = {
                     <span>Total cost</span>
                     <span>$600</span>
                     </div>
-                    <a href="/checkouts"><button class="bg-indigo-500 font-semibold hover:bg-indigo-600 py-3 text-sm text-white uppercase w-full">Checkout</button></a>
+                </div>
+                </div>
+                <a href="/Checkouts"><button class="bg-indigo-500 font-semibold hover:bg-indigo-600 py-3 text-sm text-white uppercase w-full">Checkout</button></a>
 
-                </div>
-                </div>
             </div>
             </div>
         </body>

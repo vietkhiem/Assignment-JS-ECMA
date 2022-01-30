@@ -30,7 +30,7 @@ const NewsPage = {
                     </div>
                 </section>
             </div>
-            
+            ${Footer.render()}
         `;
     },
 };
