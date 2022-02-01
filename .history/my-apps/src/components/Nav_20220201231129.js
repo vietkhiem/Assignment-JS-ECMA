@@ -4,23 +4,23 @@ const Nav = {
         <header class="h-24 sm:h-32 flex items-center z-30 w-full">
         <div class="container mx-auto px-6 flex items-center justify-between">
             <div class="uppercase text-gray-800 dark:text-white font-black text-3xl ml-32">
-                <a href="/"><img src="./lib/images/logo/4.png"></a>
+                <a href=""><img src="./lib/images/logo/4.png" alt="logo ./lib/images"></a>
             </div>
             <div class="flex items-center mr-24">
                 <nav class="font-sen text-gray-800 dark:text-white uppercase text-lg lg:flex items-center hidden">
                     <a href="#" class="py-2 px-6 flex hover:text-indigo-500">
                         Home
                     </a>
-                    <a href="" class="py-2 px-6 flex hover:text-indigo-500">
+                    <a href="#" class="py-2 px-6 flex hover:text-indigo-500">
                         Product
                     </a>
                     <a href="/blog" class="py-2 px-6 flex hover:text-indigo-500">
                         Blog
                     </a>
-                    <a href="" class="py-2 px-6 flex hover:text-indigo-500">
+                    <a href="#" class="py-2 px-6 flex hover:text-indigo-500">
                         Contact
                     </a>
-                    <a href="" class="py-2 px-6 flex hover:text-indigo-500">
+                    <a href="/cart" class="py-2 px-6 flex hover:text-indigo-500">
                         Cart
                     </a>
                 </nav>

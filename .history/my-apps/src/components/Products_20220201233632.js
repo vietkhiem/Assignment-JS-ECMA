@@ -24,7 +24,7 @@ const Products = {
                             ${post.name}
                         </a>
                         </h3>
-                        <h2 class="mt-1 text-sm text-gray-500">${post.price_old}$</h3>
+                        <p class="mt-1 text-sm text-gray-500"><h3>${post.price_old}$</h3></p>
                     </div>
                     </div>
                 </div>

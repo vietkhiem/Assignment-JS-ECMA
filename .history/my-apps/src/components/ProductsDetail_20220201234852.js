@@ -37,7 +37,7 @@ const ProductsDetail = {
                     </div>
                     <hr class="bg-gray-200 w-full my-2" />
                     <div class="flex flex-row justify-between items-center mt-4">
-                        <p class="font-medium text-base leading-4 text-gray-600 ">Dimensions</p>
+                        <p class="font-small text-base leading-4 text-gray-600 ">Dimensions</p>
                         <img onclick="rotate()" id="rotateSVG" class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 cursor-pointer transform duration-100  dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/svg4.svg" alt="dropdown">
                         <img onclick="rotate()" id="rotateSVG" class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 cursor-pointer transform duration-100 hidden dark:block" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/svg4dark.svg" alt="dropdown">
                     </div>
@@ -50,7 +50,7 @@ const ProductsDetail = {
   
             <!-- Preview Images Div For larger Screen-->
   
-            <div class="w-full sm:w-96 md:w-4/12 lg:w-4/12 flex lg:flex-row flex-col lg:gap-8 sm:gap-6 gap-4 ml-10">
+            <div class="w-full sm:w-96 md:w-8/12 lg:w-6/12 flex lg:flex-row flex-col lg:gap-8 sm:gap-6 gap-4">
                 <div class="w-full lg:w-8/12 bg-gray-100 flex justify-center items-center">
                     <img src="${data.image}" alt="Wooden Chair Previw" />
                 </div>

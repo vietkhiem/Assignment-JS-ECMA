@@ -9,7 +9,7 @@ const ProductsDetail = {
             .then((response) => response.json())
             .then((data) => /* html */ `
             ${Nav.render()}                    
-        <div class="2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4">
+        <div class="2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4 max-w-5xl mx-auto">
         <div class="flex justify-center items-center lg:flex-row flex-col gap-8">
             <!-- Description Div -->
         
@@ -50,7 +50,7 @@ const ProductsDetail = {
   
             <!-- Preview Images Div For larger Screen-->
   
-            <div class="w-full sm:w-96 md:w-4/12 lg:w-4/12 flex lg:flex-row flex-col lg:gap-8 sm:gap-6 gap-4 ml-10">
+            <div class="w-full sm:w-96 md:w-8/12 lg:w-6/12 flex lg:flex-row flex-col lg:gap-8 sm:gap-6 gap-4">
                 <div class="w-full lg:w-8/12 bg-gray-100 flex justify-center items-center">
                     <img src="${data.image}" alt="Wooden Chair Previw" />
                 </div>
@@ -67,10 +67,13 @@ const ProductsDetail = {
                 </div>
             </div>
             
-            </div>
         </div>
-        ${Footer.render()}
         
+        
+        
+                    
+                
+
             `);
     },
 

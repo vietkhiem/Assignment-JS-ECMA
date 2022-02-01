@@ -1,18 +1,18 @@
 // import data from "../data";
 // import axios from "axios";
-import Footer from "./Footer";
-import Nav from "./Nav";
 
 const ProductsDetail = {
     render(id) {
         return fetch(`https://61f7bb5539431d0017eaf9aa.mockapi.io/posts/${id}`)
             .then((response) => response.json())
             .then((data) => /* html */ `
-            ${Nav.render()}                    
+                
+
+                
         <div class="2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4">
         <div class="flex justify-center items-center lg:flex-row flex-col gap-8">
             <!-- Description Div -->
-        
+   
             <div class="w-full sm:w-96 md:w-8/12 lg:w-6/12 items-center">
                 <p class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 font-normal text-base leading-4 text-gray-600  dark:text-white"></p>
                 <h2 class="font-semibold lg:text-4xl text-3xl lg:leading-9 leading-7 text-gray-800 dark:text-white mt-4">Wooden Stool</h2>
@@ -50,7 +50,7 @@ const ProductsDetail = {
   
             <!-- Preview Images Div For larger Screen-->
   
-            <div class="w-full sm:w-96 md:w-4/12 lg:w-4/12 flex lg:flex-row flex-col lg:gap-8 sm:gap-6 gap-4 ml-10">
+            <div class="w-full sm:w-96 md:w-8/12 lg:w-6/12 flex lg:flex-row flex-col lg:gap-8 sm:gap-6 gap-4">
                 <div class="w-full lg:w-8/12 bg-gray-100 flex justify-center items-center">
                     <img src="${data.image}" alt="Wooden Chair Previw" />
                 </div>
@@ -66,13 +66,12 @@ const ProductsDetail = {
                     </div>
                 </div>
             </div>
-            
-            </div>
         </div>
-        ${Footer.render()}
         
+  
+  
+
             `);
     },
-
 };
 export default ProductsDetail;

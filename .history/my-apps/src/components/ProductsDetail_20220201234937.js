@@ -50,8 +50,8 @@ const ProductsDetail = {
   
             <!-- Preview Images Div For larger Screen-->
   
-            <div class="w-full sm:w-96 md:w-4/12 lg:w-4/12 flex lg:flex-row flex-col lg:gap-8 sm:gap-6 gap-4 ml-10">
-                <div class="w-full lg:w-8/12 bg-gray-100 flex justify-center items-center">
+            <div class="w-full sm:w-96 md:w-8/12 lg:w-6/12 flex lg:flex-row flex-col lg:gap-8 sm:gap-6 gap-4">
+                <div class=" lg:w-8/12 bg-gray-100 flex justify-center items-center">
                     <img src="${data.image}" alt="Wooden Chair Previw" />
                 </div>
                 <div class="w-full lg:w-4/12 grid lg:grid-cols-1 sm:grid-cols-4 grid-cols-2 gap-6">
