@@ -123,14 +123,14 @@ const AdminNewsPage = {
                                                 <div class="text-sm text-gray-900">${post.name}</div>
                                             </td>
                                             <td class="px-6 py-4 whitespace-nowrap">
-                                              <img src="${post.image}"  width="50"/>
+                                            ${post.image}
                                             </td>
                                             <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                                <a href="/admin/news/${post.id}/edit" class="text-indigo-600 hover:text-indigo-900">Sửa</a>
-                                                <button data-id="${post.id}" class="btn btn-remove inline-block bg-indigo-500 hover:bg-indigo-800 text-white text-sm py-2 px-6 rounded mx-4">Xóa</button>
+                                                <a href="#" class="text-indigo-600 hover:text-indigo-900">Sửa</a>
+                                                <button class="inline-block bg-indigo-500 hover:bg-indigo-800 text-white text-sm py-2 px-6 rounded mx-4">Xóa</button>
                                             </td>
                                         </tr>
-                                        `).join("")}  
+                                        `).join("")}
                                     </tbody>
                                 </table>
                             </div>
@@ -144,22 +144,6 @@ const AdminNewsPage = {
         </main>
       </div>
         `;
-    },
-    afterRender() {
-        // lấy toàn bộ button thông qua class
-        const buttons = document.querySelectorAll(".btn");
-        // lấy từng button
-        buttons.forEach((button) => {
-            button.addEventListener("click", () => {
-                // lấy ID thông qua thuộc tính data-id ở button
-                const { id } = button.dataset;
-                const confirm = window.confirm("Bạn có muốn xóa sản phẩm này không ?");
-                if (confirm) {
-                    // call api
-                    remove(id).then(() => console.log("Đã xóa thành công"));
-                }
-            });
-        });
     },
 };
 export default AdminNewsPage;

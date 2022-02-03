@@ -127,10 +127,10 @@ const AdminNewsPage = {
                                             </td>
                                             <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                                 <a href="/admin/news/${post.id}/edit" class="text-indigo-600 hover:text-indigo-900">Sửa</a>
-                                                <button data-id="${post.id}" class="btn btn-remove inline-block bg-indigo-500 hover:bg-indigo-800 text-white text-sm py-2 px-6 rounded mx-4">Xóa</button>
+                                                <button class="btn btn-remove" data-id="${post.id}" class="inline-block bg-indigo-500 hover:bg-indigo-800 text-white text-sm py-2 px-6 rounded mx-4">Xóa</button>
                                             </td>
                                         </tr>
-                                        `).join("")}  
+                                        `).join("")}
                                     </tbody>
                                 </table>
                             </div>
@@ -153,10 +153,10 @@ const AdminNewsPage = {
             button.addEventListener("click", () => {
                 // lấy ID thông qua thuộc tính data-id ở button
                 const { id } = button.dataset;
-                const confirm = window.confirm("Bạn có muốn xóa sản phẩm này không ?");
+                const confirm = window.confirm("May co chac chan muon xoa khong???");
                 if (confirm) {
                     // call api
-                    remove(id).then(() => console.log("Đã xóa thành công"));
+                    remove(id).then(() => console.log("Da xoa thanh cong"));
                 }
             });
         });

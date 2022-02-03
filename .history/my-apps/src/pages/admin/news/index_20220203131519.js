@@ -153,10 +153,10 @@ const AdminNewsPage = {
             button.addEventListener("click", () => {
                 // lấy ID thông qua thuộc tính data-id ở button
                 const { id } = button.dataset;
-                const confirm = window.confirm("Bạn có muốn xóa sản phẩm này không ?");
+                const confirm = window.confirm("May co chac chan muon xoa khong???");
                 if (confirm) {
                     // call api
-                    remove(id).then(() => console.log("Đã xóa thành công"));
+                    remove(id).then(() => console.log("Da xoa thanh cong"));
                 }
             });
         });

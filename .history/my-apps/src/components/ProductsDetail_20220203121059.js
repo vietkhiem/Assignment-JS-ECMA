@@ -5,7 +5,7 @@ import Nav from "./Nav";
 
 const ProductsDetail = {
     async render(id) {
-        const { data } = await axios.get(`https://61f7bb5539431d0017eaf9aa.mockapi.io/posts/${id}`);
+        const { data } = await axios.get("https://61f7bb5539431d0017eaf9aa.mockapi.io/posts");
         return /* html */ `
             ${Nav.render()}                    
         <div class="2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4">
@@ -15,10 +15,10 @@ const ProductsDetail = {
             <div class="w-full sm:w-96 md:w-8/12 lg:w-6/12 items-center">
                 <p class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 font-normal text-base leading-4 text-gray-600  dark:text-white"></p>
                 <h2 class="font-semibold lg:text-4xl text-3xl lg:leading-9 leading-7 text-gray-800 dark:text-white mt-4">Wooden Stool</h2>
-
+  
                 <div class="flex flex-row justify-between mt-5">
-                    <img class="dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/productDetail4-svg1.svg" alt="stars">
-                    <img class="hidden dark:block" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/productDetail4-svg1dark.svg" alt="stars">
+                   <img class="dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/productDetail4-svg1.svg" alt="stars">
+                   <img class="hidden dark:block" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/productDetail4-svg1dark.svg" alt="stars">
                     <p class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 font-normal text-base leading-4 text-gray-700 hover:underline hover:text-gray-800 dark:text-white duration-100 cursor-pointer">22 reviews</p>
                 </div>
   

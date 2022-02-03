@@ -29,7 +29,7 @@ const Products = {
                 </div>
                     `).join("")}
                 </div>
-        `;
+        `);
     },
 };
 export default Products;

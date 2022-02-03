@@ -9,6 +9,7 @@ import Cart from "./pages/cart/Cart";
 import ProductsDetail from "./components/ProductsDetail";
 import Checkouts from "./components/Checkouts";
 import AdminAddNewsPage from "./pages/admin/news/add";
+import AdminEditPost 
 
 const router = new Navigo("/", { linksSelector: "a" });
 

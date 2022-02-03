@@ -5,7 +5,7 @@ import Nav from "./Nav";
 
 const ProductsDetail = {
     async render(id) {
-        const { data } = await axios.get(`https://61f7bb5539431d0017eaf9aa.mockapi.io/posts/${id}`);
+        const { data } = await get("https://61f7bb5539431d0017eaf9aa.mockapi.io/posts");
         return /* html */ `
             ${Nav.render()}                    
         <div class="2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4">

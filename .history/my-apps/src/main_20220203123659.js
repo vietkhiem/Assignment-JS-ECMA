@@ -33,9 +33,6 @@ router.on({
     "/admin/news/add": () => {
         print(AdminAddNewsPage);
     },
-    "/admin/news/:id/edit": ({ data }) => {
-        print(AdminEditPost, data.id);
-    },
 
 });
 router.notFound(() => print(NotFoundPage));

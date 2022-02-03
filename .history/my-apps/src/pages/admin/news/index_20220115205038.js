@@ -1,9 +1,7 @@
-import axios from "axios";
 import AdminNav from "../../../components/AdminNav";
 
 const AdminNewsPage = {
-    async render() {
-        const { data } = await axios.get("https://61f7bb5539431d0017eaf9aa.mockapi.io/posts");
+    render() {
         return /* html */`
         <div class="min-h-full">
         ${AdminNav.render()}
@@ -56,6 +54,17 @@ const AdminNewsPage = {
                       />
                     </svg>
                   </button>
+  
+                  <!--
+            Dropdown menu, show/hide based on menu state.
+    
+            Entering: "transition ease-out duration-200"
+              From: "transform opacity-0 scale-95"
+              To: "transform opacity-100 scale-100"
+            Leaving: "transition ease-in duration-75"
+              From: "transform opacity-100 scale-100"
+              To: "transform opacity-0 scale-95"
+          -->
                   <div
                     class="origin-top-right absolute right-0 mt-2 -mr-1 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
                     role="menu"
@@ -104,9 +113,6 @@ const AdminNewsPage = {
                                         <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                         Tiêu đề
                                         </th>
-                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                        Image
-                                        </th>
                                         
                                         <th scope="col" class="relative px-6 py-3">
                                             <span class="sr-only">Edit</span>
@@ -114,23 +120,18 @@ const AdminNewsPage = {
                                     </tr>
                                     </thead>
                                     <tbody class="bg-white divide-y divide-gray-200">
-                                    ${data.map((post, index) => /* html */ `
                                         <tr>
                                             <td class="px-6 py-4 whitespace-nowrap">
-                                              ${index + 1}
+                                                1
                                             </td>
                                             <td class="px-6 py-4 whitespace-nowrap">
-                                                <div class="text-sm text-gray-900">${post.name}</div>
-                                            </td>
-                                            <td class="px-6 py-4 whitespace-nowrap">
-                                              <img src="${post.image}"  width="50"/>
+                                                <div class="text-sm text-gray-900">Regional Paradigm Technician</div>
                                             </td>
                                             <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                                <a href="/admin/news/${post.id}/edit" class="text-indigo-600 hover:text-indigo-900">Sửa</a>
-                                                <button data-id="${post.id}" class="btn btn-remove inline-block bg-indigo-500 hover:bg-indigo-800 text-white text-sm py-2 px-6 rounded mx-4">Xóa</button>
+                                                <a href="#" class="text-indigo-600 hover:text-indigo-900">Sửa</a>
+                                                <button class="inline-block bg-indigo-500 hover:bg-indigo-800 text-white text-sm py-2 px-6 rounded mx-4">Xóa</button>
                                             </td>
                                         </tr>
-                                        `).join("")}  
                                     </tbody>
                                 </table>
                             </div>
@@ -144,22 +145,6 @@ const AdminNewsPage = {
         </main>
       </div>
         `;
-    },
-    afterRender() {
-        // lấy toàn bộ button thông qua class
-        const buttons = document.querySelectorAll(".btn");
-        // lấy từng button
-        buttons.forEach((button) => {
-            button.addEventListener("click", () => {
-                // lấy ID thông qua thuộc tính data-id ở button
-                const { id } = button.dataset;
-                const confirm = window.confirm("Bạn có muốn xóa sản phẩm này không ?");
-                if (confirm) {
-                    // call api
-                    remove(id).then(() => console.log("Đã xóa thành công"));
-                }
-            });
-        });
     },
 };
 export default AdminNewsPage;
