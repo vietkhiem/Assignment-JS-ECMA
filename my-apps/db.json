@@ -1,0 +1,25 @@
+{
+  "posts": [
+    {
+      "name": "Yumiii ",
+      "price_old": "120",
+      "desc": "hehehoho",
+      "image": "https://firebasestorage.googleapis.com/v0/b/my-project-1585990484117.appspot.com/o/images%2F1.jpg?alt=media&token=a6ddc354-88d8-49fd-8317-00ca08f089c7",
+      "id": 1
+    },
+    {
+      "name": "Loremmmm",
+      "price_old": "60",
+      "desc": "hehe",
+      "image": "https://firebasestorage.googleapis.com/v0/b/my-project-1585990484117.appspot.com/o/images%2F1.jpg?alt=media&token=a6ddc354-88d8-49fd-8317-00ca08f089c7",
+      "id": 2
+    },
+    {
+      "name": "Yumiiiiii Yaaaaaaa",
+      "price_old": "1500",
+      "desc": "hehe",
+      "image": "http://res.cloudinary.com/fpt-polytechnic-sv/image/upload/v1644243523/101235440_929937460765979_1849222036426063872_n_bhnteu.jpg",
+      "id": 3
+    }
+  ]
+}
