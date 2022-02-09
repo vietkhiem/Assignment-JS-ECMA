@@ -41,36 +41,5 @@
       "id": 5
     }
   ],
-  "users": [
-    {
-      "email": "vietkhiemdz@gmail.com",
-      "password": "$2a$10$6xJXmU6sFlZDo2Tm58DR5OKmuNmH6fMg0H5Zz7B2e07fYgIW/2Ex.",
-      "username": "vietkhiemdz",
-      "id": 1
-    },
-    {
-      "email": "vietkhiemdzz@gmail.com",
-      "password": "$2a$10$UsZp8huqR3XoTZb3bFTQdesJM9JPIgMk5hkrG13UijcvkTT.K0jmK",
-      "username": "vietkhiemdzz",
-      "id": 2
-    },
-    {
-      "email": "vietkhiemdzzz@gmail.com",
-      "password": "$2a$10$n5iNzdi6nMsM77WSi.lpN.jmtf9zK41HQsUHKvtB2WmI/yxtACEZ.",
-      "username": "hehe",
-      "id": 3
-    },
-    {
-      "email": "hehehihihaha@gmail.com",
-      "password": "$2a$10$3X5sTMWlIwO/zkyuaMtSiedurd/iksrepNw11ug0dneOnXg3QlEw.",
-      "username": "khiêm1",
-      "id": 4
-    },
-    {
-      "email": "vietkhiemfafadz@gmail.com",
-      "password": "$2a$10$3rxq3VSFanfkci2B2eJFDeLUxIdC4LAC6pWfPp0/rvhxeszz421O2",
-      "username": "haha",
-      "id": 5
-    }
-  ]
+  "rate": []
 }

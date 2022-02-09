@@ -64,14 +64,10 @@ const Signin = {
         const formSignin = document.querySelector("#formSignin");
         formSignin.addEventListener("submit", (e) => {
             e.preventDefault();
-            try {
-                signin({
-                    email: document.querySelector("#email").value,
-                    password: document.querySelector("#password").value,
-                });
-            } catch (error) {
-                console.log(error);
-            }
+            signin({
+                email: document.querySelector("#email").value,
+                password: document.querySelector("#password").value,
+            });
         });
     },
 };

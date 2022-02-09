@@ -1,6 +1,5 @@
 import Footer from "../components/Footer";
 import Nav from "../components/Nav";
-import { signup } from "../api/user";
 
 const Signup = {
     render() {
@@ -51,7 +50,7 @@ const Signup = {
                                 <label class="block mt-4 text-sm">
                                     Password
                                 </label>
-                                <input id="password"
+                                <input
                                     class="w-full px-4 py-2 text-sm border rounded-md focus:border-blue-400 focus:outline-none focus:ring-1 focus:ring-blue-600"
                                     placeholder="Password" type="password" />
                                 </div>
@@ -73,21 +72,6 @@ const Signup = {
         </div>
         ${Footer.render()}
         `;
-    },
-    afterRender() {
-        const formSignup = document.querySelector("#formSignup");
-        formSignup.addEventListener("submit", (e) => {
-            e.preventDefault();
-            try {
-                signup({
-                    username: document.querySelector("#username").value,
-                    email: document.querySelector("#email").value,
-                    password: document.querySelector("#password").value,
-                });
-            } catch (error) {
-                console.log(error);
-            }
-        });
     },
 };
 export default Signup;

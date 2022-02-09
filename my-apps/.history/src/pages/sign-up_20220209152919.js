@@ -1,6 +1,5 @@
 import Footer from "../components/Footer";
 import Nav from "../components/Nav";
-import { signup } from "../api/user";
 
 const Signup = {
     render() {
@@ -73,21 +72,6 @@ const Signup = {
         </div>
         ${Footer.render()}
         `;
-    },
-    afterRender() {
-        const formSignup = document.querySelector("#formSignup");
-        formSignup.addEventListener("submit", (e) => {
-            e.preventDefault();
-            try {
-                signup({
-                    username: document.querySelector("#username").value,
-                    email: document.querySelector("#email").value,
-                    password: document.querySelector("#password").value,
-                });
-            } catch (error) {
-                console.log(error);
-            }
-        });
     },
 };
 export default Signup;

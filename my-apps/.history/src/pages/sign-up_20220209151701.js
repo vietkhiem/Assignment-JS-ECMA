@@ -1,6 +1,5 @@
 import Footer from "../components/Footer";
 import Nav from "../components/Nav";
-import { signup } from "../api/user";
 
 const Signup = {
     render() {
@@ -33,8 +32,7 @@ const Signup = {
                                 <label class="block text-sm">
                                     Name
                                 </label>
-                                <input id="username"
-                                    type="text"
+                                <input type="text"
                                     class="w-full px-4 py-2 text-sm border rounded-md focus:border-blue-400 focus:outline-none focus:ring-1 focus:ring-blue-600"
                                     placeholder="Name" />
                                 </div>
@@ -42,8 +40,7 @@ const Signup = {
                                 <label class="block text-sm">
                                     Email
                                 </label>
-                                <input id="email"
-                                    type="email"
+                                <input type="email"
                                     class="w-full px-4 py-2 text-sm border rounded-md focus:border-blue-400 focus:outline-none focus:ring-1 focus:ring-blue-600"
                                     placeholder="Email Address" />
                                 </div>
@@ -51,7 +48,7 @@ const Signup = {
                                 <label class="block mt-4 text-sm">
                                     Password
                                 </label>
-                                <input id="password"
+                                <input
                                     class="w-full px-4 py-2 text-sm border rounded-md focus:border-blue-400 focus:outline-none focus:ring-1 focus:ring-blue-600"
                                     placeholder="Password" type="password" />
                                 </div>
@@ -73,21 +70,6 @@ const Signup = {
         </div>
         ${Footer.render()}
         `;
-    },
-    afterRender() {
-        const formSignup = document.querySelector("#formSignup");
-        formSignup.addEventListener("submit", (e) => {
-            e.preventDefault();
-            try {
-                signup({
-                    username: document.querySelector("#username").value,
-                    email: document.querySelector("#email").value,
-                    password: document.querySelector("#password").value,
-                });
-            } catch (error) {
-                console.log(error);
-            }
-        });
     },
 };
 export default Signup;

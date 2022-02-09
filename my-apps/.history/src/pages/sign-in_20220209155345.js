@@ -70,7 +70,7 @@ const Signin = {
                     password: document.querySelector("#password").value,
                 });
             } catch (error) {
-                console.log(error);
+
             }
         });
     },
