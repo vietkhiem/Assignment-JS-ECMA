@@ -116,7 +116,6 @@ const AdminAddNewsPage = {
                     desc: document.querySelector("#desc-post").value,
                     image: response.data.url,
                 });
-                alert("Thêm sản phẩm thành công");
             });
         });
     },

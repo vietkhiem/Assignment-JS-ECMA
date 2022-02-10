@@ -84,7 +84,7 @@ const Signup = {
                     email: document.querySelector("#email").value,
                     password: document.querySelector("#password").value,
                 });
-                alert("Đăng ký thành công");
+                alert("Hello! I am an alert box!!");
             } catch (error) {
                 console.log(error);
             }

@@ -43,7 +43,7 @@ const AdminEditPost = {
                             <input id="title-post" value="${data.name}" placeholder="Title" class="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" type="text">
                         </div>
 
-                        <div class="w-full mx-2 ">
+                        <div class="w-full mx-2 md:mt-5">
                                 <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200 ">Ảnh của sản phẩm</label>
                                 <input type="text" 
                                 id="image-post" 
@@ -88,7 +88,6 @@ const AdminEditPost = {
     },
     afterRender(id) {
         const formEdit = document.querySelector("#form-edit");
-
         formEdit.addEventListener("submit", (e) => {
             e.preventDefault();
             update({
@@ -98,8 +97,8 @@ const AdminEditPost = {
                 price_old: document.querySelector("#price-post-old").value,
                 desc: document.querySelector("#desc-post").value,
                 image: document.querySelector("#image-post").value,
+
             });
-            alert("Cập nhật sản phẩm thành công");
         });
     },
 };

@@ -84,7 +84,7 @@ const Signup = {
                     email: document.querySelector("#email").value,
                     password: document.querySelector("#password").value,
                 });
-                alert("Đăng ký thành công");
+                alert = "đ";
             } catch (error) {
                 console.log(error);
             }

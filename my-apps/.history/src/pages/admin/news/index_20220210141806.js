@@ -154,7 +154,7 @@ const AdminNewsPage = {
         const buttons = document.querySelectorAll(".btn");
         // lấy từng button
         buttons.forEach((button) => {
-            button.addEventListener("click", (e) => {
+            button.addEventListener("click", () => {
                 e.preventDefault();
                 // lấy ID thông qua thuộc tính data-id ở button
                 const { id } = button.dataset;

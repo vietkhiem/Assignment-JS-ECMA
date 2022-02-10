@@ -1,0 +1,20 @@
+{
+  "posts": [
+    {
+      "id": 8,
+      "name": "Yumiiiiii ",
+      "price_new": "2800",
+      "price_old": "5000",
+      "desc": "jjjjjjjjjjjjjjjj",
+      "image": "http://res.cloudinary.com/fpt-polytechnic-sv/image/upload/v1644468547/10_utwoha.jpg"
+    }
+  ],
+  "users": [
+    {
+      "email": "vietkhiemdz@gmail.com",
+      "password": "$2a$10$6xJXmU6sFlZDo2Tm58DR5OKmuNmH6fMg0H5Zz7B2e07fYgIW/2Ex.",
+      "username": "vietkhiemdz",
+      "id": 1
+    }
+  ]
+}

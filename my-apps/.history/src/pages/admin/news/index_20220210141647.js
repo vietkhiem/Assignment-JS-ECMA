@@ -154,8 +154,7 @@ const AdminNewsPage = {
         const buttons = document.querySelectorAll(".btn");
         // lấy từng button
         buttons.forEach((button) => {
-            button.addEventListener("click", (e) => {
-                e.preventDefault();
+            button.addEventListener("click", () => {
                 // lấy ID thông qua thuộc tính data-id ở button
                 const { id } = button.dataset;
                 const confirm = window.confirm("Bạn có muốn xóa sản phẩm này không ?");

@@ -154,17 +154,16 @@ const AdminNewsPage = {
         const buttons = document.querySelectorAll(".btn");
         // lấy từng button
         buttons.forEach((button) => {
-            button.addEventListener("click", (e) => {
-                e.preventDefault();
+            button.addEventListener("click", () => {
                 // lấy ID thông qua thuộc tính data-id ở button
                 const { id } = button.dataset;
                 const confirm = window.confirm("Bạn có muốn xóa sản phẩm này không ?");
                 if (confirm) {
                     // call api
-                    remove(id).then(() => console.log("Đã xóa thành công"));
+                    remove(id).then(() => window.confirm("Đã xóa thành công"));
                 }
-                alert("Đăng ký thành công");
             });
+            alert("Đăng ký thành công");
         });
     },
 };
