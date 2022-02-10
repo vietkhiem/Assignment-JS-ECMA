@@ -24,10 +24,11 @@ const ProductsDetail = {
                 </div>
   
                 <p class="font-normal text-base leading-6 text-gray-600  mt-7">${data.desc}</p>
-                <ul class="flex font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 mt-6 text-red-600">
-                    <li class ="line-through px-4 py-2">Giá cũ ${data.price_old}$</li>
-                    <li class ="px-4 py-2">Giá sale ${data.price_new}$</li>
-                </ul>
+                <ul class="flex mt-1 text-1xl font-extrabold text-red-600 hover:underline">
+                                <li class ="line-through px-4 py-2">Giá cũ ${data.price_old}$</li>
+                                <li class ="px-4 py-2">Giá sale ${data.price_new}$</li>
+                            </ul>
+
   
                 <div class="lg:mt-11 mt-10">
                     <div class="flex flex-row justify-between">

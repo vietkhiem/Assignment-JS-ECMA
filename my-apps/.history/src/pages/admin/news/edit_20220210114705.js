@@ -100,6 +100,7 @@ const AdminEditPost = {
                 image: document.querySelector("#image-post").value,
 
             });
+            // axios.post('https://5e79b4b817314d00161333da.mockapi.io/posts', postFake)
         });
     },
 };

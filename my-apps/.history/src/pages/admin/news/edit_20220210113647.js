@@ -46,11 +46,10 @@ const AdminEditPost = {
                         <div class="w-full mx-2 mt-4 md:mt-5">
                                 <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200 ">Ảnh của sản phẩm</label>
                 
-                                <input type="text" 
+                                <input type="file" value="${data.image}"
                                 id="image-post" 
                                 placeholder="Image" 
-                                class="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
-                                value="${data.image}" >
+                                class="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" >
                         </div>
             
                         <div class="w-full mx-2 mt-4 md:mt-0">
@@ -72,7 +71,7 @@ const AdminEditPost = {
                     <div class="w-full mt-4">
                         <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">Mô tả sản phẩm</label>
             
-                        <textarea  id="desc-post" value="${data.desc}" class="block w-full h-40 px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40"></textarea>
+                        <textarea  id="desc-post" class="block w-full h-40 px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40"></textarea>
                     </div>
             
                     <div class="flex justify-center mt-6">
@@ -100,6 +99,7 @@ const AdminEditPost = {
                 image: document.querySelector("#image-post").value,
 
             });
+            // axios.post('https://5e79b4b817314d00161333da.mockapi.io/posts', postFake)
         });
     },
 };

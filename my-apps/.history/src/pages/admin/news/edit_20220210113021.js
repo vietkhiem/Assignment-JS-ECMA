@@ -1,9 +1,9 @@
-import { get, update } from "../../../api/post";
 import AdminNav from "../../../components/AdminNav";
+import { add } from "../../../api/post";
 
 const AdminEditPost = {
-    async render(id) {
-        const { data } = await get(id);
+    async render() {
+        const {data}
         return /* html */`
         <div class="min-h-full">
             ${AdminNav.render()}
@@ -33,36 +33,35 @@ const AdminEditPost = {
     <main>
             <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
                 <!-- Replace with your content -->
-                <form action="" id="form-edit">
+                <form action="" id="form-add">
                 <section class="w-full max-w-2xl px-6 py-4 mx-auto bg-white rounded-md shadow-md dark:bg-gray-800">
                 <div class="mt-6 ">
                     <div class="items-center -mx-2 md:flex">
                         <div class="w-full mx-2">
                             <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">Tên sản phẩm</label></label>
             
-                            <input id="title-post" value="${data.name}" placeholder="Title" class="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" type="text">
+                            <input id="title-post" placeholder="Title" class="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" type="text">
                         </div>
 
                         <div class="w-full mx-2 mt-4 md:mt-5">
                                 <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200 ">Ảnh của sản phẩm</label>
                 
-                                <input type="text" 
+                                <input type="file" 
                                 id="image-post" 
                                 placeholder="Image" 
-                                class="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
-                                value="${data.image}" >
+                                class="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" >
                         </div>
             
                         <div class="w-full mx-2 mt-4 md:mt-0">
                             <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">Giá sản phẩm cũ</label>
             
-                            <input id="price-post-old" value="${data.price_old}" class="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" >
+                            <input id="price-post-old" class="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" >
                         </div>
 
                         <div class="w-full mx-2 mt-4 md:mt-0">
                             <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">Giá sản phẩm mới</label>
             
-                            <input id="price-post-new" value="${data.price_new}" class="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" >
+                            <input id="price-post-new" class="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" >
                         </div>
 
                         
@@ -72,7 +71,7 @@ const AdminEditPost = {
                     <div class="w-full mt-4">
                         <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">Mô tả sản phẩm</label>
             
-                        <textarea  id="desc-post" value="${data.desc}" class="block w-full h-40 px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40"></textarea>
+                        <textarea  id="desc-post" class="block w-full h-40 px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40"></textarea>
                     </div>
             
                     <div class="flex justify-center mt-6">
@@ -93,13 +92,11 @@ const AdminEditPost = {
             e.preventDefault();
             update({
                 id,
-                name: document.querySelector("#title-post").value,
-                price_new: document.querySelector("#price-post-new").value,
-                price_old: document.querySelector("#price-post-old").value,
+                title: document.querySelector("#title-post").value,
+                img: document.querySelector("#img-post").value,
                 desc: document.querySelector("#desc-post").value,
-                image: document.querySelector("#image-post").value,
-
             });
+            // axios.post('https://5e79b4b817314d00161333da.mockapi.io/posts', postFake)
         });
     },
 };

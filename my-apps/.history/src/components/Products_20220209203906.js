@@ -26,9 +26,9 @@ const Products = {
                         </a>
                         </h3>
                         <div class="mt-4 text-center">
-                            <ul class="flex mt-1 text-1xl font-extrabold text-red-600 hover:underline">
-                                <li class ="line-through px-4 py-2">Giá cũ ${post.price_old}$</li>
-                                <li class ="px-4 py-2">Giá sale ${post.price_new}$</li>
+                            <ul class="flex mt-1 text-sm font-sans text-red-600 hover:underline">
+                                <li class ="line-through py-3">Giá cũ ${post.price_old}$</li>
+                                <li>Giá sale ${post.price_new}$</li>
                             </ul>
                            
                         </div>
