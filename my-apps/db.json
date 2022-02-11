@@ -1,44 +1,50 @@
 {
   "posts": [
     {
+      "id": 1,
       "name": "Largest Water Pot",
       "price_new": "900",
       "price_old": "1200",
-      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores recusandae molestiae similique illum fugit, tempore quo ipsam inventore, saepe obcaecati sint culpa odio eveniet accusantium aspernatur autem ullam. Qui, impedit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores recusandae molestiae similique illum fugit, tempore quo ipsam inventore, saepe obcaecati sint culpa odio eveniet accusantium aspernatur autem ullam. Qui, impedit.\n",
-      "image": "http://res.cloudinary.com/fpt-polytechnic-sv/image/upload/v1644477601/1_msntmq.jpg",
-      "id": 1
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores recusandae molestiae similique illum fugit, tempore quo ipsam inventore, saepe obcaecati sint culpa odio eveniet accusantium aspernatur autem ullam. Qui, impedit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores recusandae molestiae similique illum fugit, tempore quo ipsam inventore, saepe obcaecati sint culpa odio eveniet accusantium aspernatur autem ullam. Qui, impedit.",
+      "image": "http://res.cloudinary.com/fpt-polytechnic-sv/image/upload/v1644477601/1_msntmq.jpg"
     },
     {
+      "id": 2,
       "name": "Nemo Enim Ipsam",
       "price_new": "1250",
       "price_old": "1500",
-      "desc": "      \"desc\": \"Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores recusandae molestiae similique illum fugit, tempore quo ipsam inventore, saepe obcaecati sint culpa odio eveniet accusantium aspernatur autem ullam. Qui, impedit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores recusandae molestiae similique illum fugit, tempore quo ipsam inventore, saepe obcaecati sint culpa odio eveniet accusantium aspernatur autem ullam. Qui, impedit.\",\n",
-      "image": "http://res.cloudinary.com/fpt-polytechnic-sv/image/upload/v1644477758/2_zmdofe.jpg",
-      "id": 2
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores recusandae molestiae similique illum fugit, tempore quo ipsam inventore, saepe obcaecati sint culpa odio eveniet accusantium aspernatur autem ullam. Qui, impedit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores recusandae molestiae similique illum fugit, tempore quo ipsam inventore, saepe obcaecati sint culpa odio eveniet accusantium aspernatur autem ullam. Qui, impedit.",
+      "image": "http://res.cloudinary.com/fpt-polytechnic-sv/image/upload/v1644477758/2_zmdofe.jpg"
     },
     {
+      "id": 3,
       "name": "Dummy Yummi",
       "price_new": "850",
       "price_old": "1200",
-      "desc": "\"desc\": \"Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores recusandae molestiae similique illum fugit, tempore quo ipsam inventore, saepe obcaecati sint culpa odio eveniet accusantium aspernatur autem ullam. Qui, impedit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores recusandae molestiae similique illum fugit, tempore quo ipsam inventore, saepe obcaecati sint culpa odio eveniet accusantium aspernatur autem ullam. Qui, impedit.\",",
-      "image": "http://res.cloudinary.com/fpt-polytechnic-sv/image/upload/v1644477796/4_cylnoh.jpg",
-      "id": 3
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores recusandae molestiae similique illum fugit, tempore quo ipsam inventore, saepe obcaecati sint culpa odio eveniet accusantium aspernatur autem ullam. Qui, impedit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores recusandae molestiae similique illum fugit, tempore quo ipsam inventore, saepe obcaecati sint culpa odio eveniet accusantium aspernatur autem ullam. Qui, impedit.",
+      "image": "http://res.cloudinary.com/fpt-polytechnic-sv/image/upload/v1644477796/4_cylnoh.jpg"
     },
     {
+      "id": 4,
       "name": "Special Wood Basket",
       "price_new": "1950",
       "price_old": "2150",
-      "desc": "\"desc\": \"Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores recusandae molestiae similique illum fugit, tempore quo ipsam inventore, saepe obcaecati sint culpa odio eveniet accusantium aspernatur autem ullam. Qui, impedit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores recusandae molestiae similique illum fugit, tempore quo ipsam inventore, saepe obcaecati sint culpa odio eveniet accusantium aspernatur autem ullam. Qui, impedit.\",",
-      "image": "http://res.cloudinary.com/fpt-polytechnic-sv/image/upload/v1644477886/6_hxlgbn.jpg",
-      "id": 4
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores recusandae molestiae similique illum fugit, tempore quo ipsam inventore, saepe obcaecati sint culpa odio eveniet accusantium aspernatur autem ullam. Qui, impedit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores recusandae molestiae similique illum fugit, tempore quo ipsam inventore, saepe obcaecati sint culpa odio eveniet accusantium aspernatur autem ullam. Qui, impedit.",
+      "image": "http://res.cloudinary.com/fpt-polytechnic-sv/image/upload/v1644477886/6_hxlgbn.jpg"
     }
   ],
   "users": [
     {
       "email": "vietkhiemdz@gmail.com",
-      "password": "$2a$10$6xJXmU6sFlZDo2Tm58DR5OKmuNmH6fMg0H5Zz7B2e07fYgIW/2Ex.",
+      "password": "$2a$10$sqriINnuuhliUsYd/wgra.E05V1mb/CYPiR0EjKhKAR/VgNt0F1.6",
       "username": "vietkhiemdz",
       "id": 1
+    },
+    {
+      "email": "vietkhiemddaadz@gmail.com",
+      "password": "$2a$10$GpcKqujEWQfp14mzN8HCxuODGVUUZRwKRKd/TMqkomN78Qko2/Bi.",
+      "username": "vietkhiemdzz",
+      "id": 2
     }
   ]
 }
