@@ -36,15 +36,9 @@
   "users": [
     {
       "email": "vietkhiemdz@gmail.com",
-      "password": "$2a$10$sqriINnuuhliUsYd/wgra.E05V1mb/CYPiR0EjKhKAR/VgNt0F1.6",
+      "password": "$2a$10$XMVhG8jlhET7asNqm5C8T.ZVToWto0A0/XBAPgkhAj/JMC55WN3fS",
       "username": "vietkhiemdz",
       "id": 1
-    },
-    {
-      "email": "vietkhiemddaadz@gmail.com",
-      "password": "$2a$10$GpcKqujEWQfp14mzN8HCxuODGVUUZRwKRKd/TMqkomN78Qko2/Bi.",
-      "username": "vietkhiemdzz",
-      "id": 2
     }
   ]
 }
