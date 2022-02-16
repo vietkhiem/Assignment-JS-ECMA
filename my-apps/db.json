@@ -35,10 +35,16 @@
   ],
   "users": [
     {
-      "email": "vietkhiemdz@gmail.com",
-      "password": "$2a$10$XMVhG8jlhET7asNqm5C8T.ZVToWto0A0/XBAPgkhAj/JMC55WN3fS",
-      "username": "vietkhiemdz",
+      "email": "admin@gmail.com",
+      "password": "$2a$10$tnRKZzDy9GJjrRyd3/skvui/UtIqFSRYxfTQlZoT.RNzIdyiW0qRy",
+      "username": "admin",
       "id": 1
+    },
+    {
+      "email": "vietkhiemdz@gmail.com",
+      "password": "$2a$10$RD6ZGlmYTOg0d2I8t2dSvOXuoR.ODuUtWesbOhnfRMJMc7pOQ12nq",
+      "username": "vietkhiemdz",
+      "id": 2
     }
   ]
 }
