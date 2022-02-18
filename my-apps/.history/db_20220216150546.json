@@ -1,0 +1,51 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "name": "Largest Water Pot",
+      "price_new": "900",
+      "price_old": "1200",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores recusandae molestiae similique illum fugit, tempore quo ipsam inventore, saepe obcaecati sint culpa odio eveniet accusantium aspernatur autem ullam. Qui, impedit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores recusandae molestiae similique illum fugit, tempore quo ipsam inventore, saepe obcaecati sint culpa odio eveniet accusantium aspernatur autem ullam. Qui, impedit.",
+      "image": "http://res.cloudinary.com/fpt-polytechnic-sv/image/upload/v1644477601/1_msntmq.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Nemo Enim Ipsam",
+      "price_new": "1250",
+      "price_old": "1500",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores recusandae molestiae similique illum fugit, tempore quo ipsam inventore, saepe obcaecati sint culpa odio eveniet accusantium aspernatur autem ullam. Qui, impedit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores recusandae molestiae similique illum fugit, tempore quo ipsam inventore, saepe obcaecati sint culpa odio eveniet accusantium aspernatur autem ullam. Qui, impedit.",
+      "image": "http://res.cloudinary.com/fpt-polytechnic-sv/image/upload/v1644477758/2_zmdofe.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Dummy Yummi",
+      "price_new": "850",
+      "price_old": "1200",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores recusandae molestiae similique illum fugit, tempore quo ipsam inventore, saepe obcaecati sint culpa odio eveniet accusantium aspernatur autem ullam. Qui, impedit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores recusandae molestiae similique illum fugit, tempore quo ipsam inventore, saepe obcaecati sint culpa odio eveniet accusantium aspernatur autem ullam. Qui, impedit.",
+      "image": "http://res.cloudinary.com/fpt-polytechnic-sv/image/upload/v1644477796/4_cylnoh.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Special Wood Basket",
+      "price_new": "1950",
+      "price_old": "2150",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores recusandae molestiae similique illum fugit, tempore quo ipsam inventore, saepe obcaecati sint culpa odio eveniet accusantium aspernatur autem ullam. Qui, impedit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores recusandae molestiae similique illum fugit, tempore quo ipsam inventore, saepe obcaecati sint culpa odio eveniet accusantium aspernatur autem ullam. Qui, impedit.",
+      "image": "http://res.cloudinary.com/fpt-polytechnic-sv/image/upload/v1644477886/6_hxlgbn.jpg"
+    }
+  ],
+  "users": [
+    {
+      "email": "admin@gmail.com",
+      "password": "$2a$10$tnRKZzDy9GJjrRyd3/skvui/UtIqFSRYxfTQlZoT.RNzIdyiW0qRy",
+      "username": "admin",
+      "id": 1
+    },
+    {
+      "email": "vietkhiemdz@gmail.com",
+      "password": "$2a$10$RD6ZGlmYTOg0d2I8t2dSvOXuoR.ODuUtWesbOhnfRMJMc7pOQ12nq",
+      "username": "vietkhiemdz",
+      "id": 2
+    }
+  ]
+  "products": [],
+}
