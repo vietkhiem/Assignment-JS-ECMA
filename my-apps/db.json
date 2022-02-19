@@ -87,8 +87,16 @@
       "name": "Loremmmm update",
       "price_new": "2800",
       "price_old": "1500",
-      "desc": "haha",
+      "desc": "",
       "image": "http://res.cloudinary.com/fpt-polytechnic-sv/image/upload/v1645173848/10_gfo1qq.jpg"
+    },
+    {
+      "name": "Yumiiiiii Yaaaaaaa",
+      "price_new": "900",
+      "price_old": "1200",
+      "desc": "Newwww",
+      "image": "http://res.cloudinary.com/fpt-polytechnic-sv/image/upload/v1645235080/7_iheagm.jpg",
+      "id": 7
     }
   ],
   "users": [
