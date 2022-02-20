@@ -1,1 +1,0 @@
-router.notFound(() => print(NotFoundPage));
