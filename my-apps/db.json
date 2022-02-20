@@ -51,12 +51,12 @@
   ],
   "products": [
     {
-      "name": "Largest Water Pot",
+      "id": 1,
+      "name": "Largest Water Pot ",
       "price_new": "900",
       "price_old": "1200",
-      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores recusandae molestiae similique illum fugit, tempore quo ipsam inventore, saepe obcaecati sint culpa odio eveniet accusantium aspernatur autem ullam. Qui, impedit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores recusandae molestiae similique illum fugit, tempore quo ipsam inventore, saepe obcaecati sint culpa odio eveniet accusantium aspernatur autem ullam. Qui, impedit.",
-      "image": "http://res.cloudinary.com/fpt-polytechnic-sv/image/upload/v1645070922/1_rna8ar.jpg",
-      "id": 1
+      "desc": "",
+      "image": "http://res.cloudinary.com/fpt-polytechnic-sv/image/upload/v1645070922/1_rna8ar.jpg"
     },
     {
       "name": "Nemo Enim Ipsam",
@@ -81,30 +81,60 @@
       "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores recusandae molestiae similique illum fugit, tempore quo ipsam inventore, saepe obcaecati sint culpa odio eveniet accusantium aspernatur autem ullam. Qui, impedit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores recusandae molestiae similique illum fugit, tempore quo ipsam inventore, saepe obcaecati sint culpa odio eveniet accusantium aspernatur autem ullam. Qui, impedit.",
       "image": "http://res.cloudinary.com/fpt-polytechnic-sv/image/upload/v1645071054/4_fbbidp.jpg",
       "id": 5
+    }
+  ],
+  "contacts": [
+    {
+      "name": "Vietkhiemdz",
+      "email": "vietkhiemdz@gmail.com",
+      "message": "hihi",
+      "id": 1
+    }
+  ],
+  "checkouts": [
+    {
+      "name": "Vietkhiemdz",
+      "email": "vietkhiemdz@gmail.com",
+      "address": "aaaaaa",
+      "phone": "0965225408",
+      "id": 1
     },
     {
-      "id": 6,
-      "name": "Loremmmm update",
-      "price_new": "2800",
-      "price_old": "1500",
-      "desc": "",
-      "image": "http://res.cloudinary.com/fpt-polytechnic-sv/image/upload/v1645173848/10_gfo1qq.jpg"
-    },
+      "name": "vietkhiem",
+      "email": "vietkhiemdz@gmail.com",
+      "address": "aaaaaa",
+      "phone": "0965225408",
+      "id": 2
+    }
+  ],
+  "blogs": [
     {
-      "name": "Yumiiiiii Yaaaaaaa",
-      "price_new": "900",
-      "price_old": "1200",
-      "desc": "Newwww",
-      "image": "http://res.cloudinary.com/fpt-polytechnic-sv/image/upload/v1645235080/7_iheagm.jpg",
+      "title": "Loremmmm",
+      "time": "20-02-2022",
+      "desc": "haha",
+      "image": "http://res.cloudinary.com/fpt-polytechnic-sv/image/upload/v1645357978/10_e3rgmc.jpg",
       "id": 7
+    },
+    {
+      "title": "Yumiiiiii Yaaaaaaa",
+      "time": "20-02-2022",
+      "desc": "haha",
+      "image": "http://res.cloudinary.com/fpt-polytechnic-sv/image/upload/v1645360858/1_owfn1p.jpg",
+      "id": 8
     }
   ],
   "users": [
     {
-      "email": "vietkhiemdz@gmail.com",
-      "password": "$2a$10$Sb7KsbxSf0hDVF3WF7PeJupuI4so6/hOx42AZDIZvI63o7ni6d.Zm",
-      "username": "vietkhiemdz",
+      "email": "admin@gmail.com",
+      "password": "$2a$10$9B7ZSLV5KQ6CdGEnXGbmDOJvd2uQDCRATqij.hukgbYpIjhBVRi5O",
+      "username": "admin",
       "id": 1
+    },
+    {
+      "email": "linhkinggg@gmai.com",
+      "password": "$2a$10$szCVsUOSKcY1EvUsLR00aOHxTCw2WwD0ZLvUOsVaahb4Ts7B3F5h2",
+      "username": "xuxiuxinxo16",
+      "id": 2
     }
   ]
 }

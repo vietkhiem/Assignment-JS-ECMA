@@ -1,0 +1,38 @@
+import { getAll } from "../api/blog";
+import Footer from "./Footer";
+import Nav from "./Nav";
+
+const Blog = {
+    async render() {
+        const { data } = await getAll();
+        return /* html */ `
+        <div class="max-w-7xl mx-auto ">
+        ${Nav.render()}
+        <div class="lg:flex justify-center">
+        ${data.map((blog) => /* html */`
+            <div class="2xl:w-7/12 lg:w-8/12 md:w-10/12">
+                <img src="https://i.ibb.co/ZY43FRd/blog-1-desktop.png" alt="fingerprint recognition" class="lg:w-full w-auto" />
+                <div class="mt-4">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <p class="text-base leading-4 text-gray-500">5 feb</p>
+                            <p class="text-base leading-none text-gray-500 ml-12">5 min read</p>
+                        </div>
+                        <div class="flex items-center">
+                          <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/blog-4-svg1.svg" alt="line" />
+                            <p class="text-base leading-none text-gray-500 ml-2">Jeff Bill</p>
+                        </div>
+                    </div>
+                    <h1 class="lg:text-3xl text-2xl font-semibold mt-4 text-gray-800">Chip fingerprint technology for secure transaction</h1>
+                    <p class="text-base leading-6 text-gray-600 mt-2">The emerge of internet of Things has brought in, rather urgently, a need for low-cost security technology. While passwords and other such forms of encription are software base, there is also a need for security level</p>
+                </div>
+            </div>
+            
+            
+        `).join("")}
+    </div>
+    ${Footer.render()}
+        `;
+    },
+};
+export default Blog;
