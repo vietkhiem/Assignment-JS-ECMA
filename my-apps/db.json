@@ -55,8 +55,8 @@
       "name": "Largest Water Pot ",
       "price_new": "900",
       "price_old": "1200",
-      "desc": "",
-      "image": "http://res.cloudinary.com/fpt-polytechnic-sv/image/upload/v1645070922/1_rna8ar.jpg"
+      "desc": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan",
+      "image": "http://res.cloudinary.com/fpt-polytechnic-sv/image/upload/v1645507251/6_nafohw.jpg"
     },
     {
       "name": "Nemo Enim Ipsam",
@@ -81,32 +81,42 @@
       "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores recusandae molestiae similique illum fugit, tempore quo ipsam inventore, saepe obcaecati sint culpa odio eveniet accusantium aspernatur autem ullam. Qui, impedit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores recusandae molestiae similique illum fugit, tempore quo ipsam inventore, saepe obcaecati sint culpa odio eveniet accusantium aspernatur autem ullam. Qui, impedit.",
       "image": "http://res.cloudinary.com/fpt-polytechnic-sv/image/upload/v1645071054/4_fbbidp.jpg",
       "id": 5
-    }
-  ],
-  "contacts": [
-    {
-      "name": "Vietkhiemdz",
-      "email": "vietkhiemdz@gmail.com",
-      "message": "hihi",
-      "id": 1
-    }
-  ],
-  "checkouts": [
-    {
-      "name": "Vietkhiemdz",
-      "email": "vietkhiemdz@gmail.com",
-      "address": "aaaaaa",
-      "phone": "0965225408",
-      "id": 1
     },
     {
-      "name": "vietkhiem",
-      "email": "vietkhiemdz@gmail.com",
-      "address": "aaaaaa",
-      "phone": "0965225408",
-      "id": 2
+      "name": "Loremmmm",
+      "price_new": "900",
+      "price_old": "1200",
+      "desc": "sann pham 1",
+      "image": "http://res.cloudinary.com/fpt-polytechnic-sv/image/upload/v1645428063/4_mqnczy.jpg",
+      "id": 6
+    },
+    {
+      "name": "Donec Ac Tempus Nrb",
+      "price_new": "1200",
+      "price_old": "1500",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores recusandae molestiae similique illum fugit, tempore quo ipsam inventore, saepe obcaecati sint culpa odio eveniet accusantium aspernatur autem ullam. Qui, impedit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores recusandae molestiae similique illum fugit, tempore quo ipsam inventore, saepe obcaecati sint culpa odio eveniet accusantium aspernatur autem ullam. Qui, impedit.",
+      "image": "http://res.cloudinary.com/fpt-polytechnic-sv/image/upload/v1645506963/10_nnujrr.jpg",
+      "id": 7
+    },
+    {
+      "id": 8,
+      "name": "Dummy Product Title",
+      "price_new": "2800",
+      "price_old": "5000",
+      "desc": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan",
+      "image": "http://res.cloudinary.com/fpt-polytechnic-sv/image/upload/v1645507897/7_wpdokd.jpg"
+    },
+    {
+      "name": "Voluptatem Accusantium",
+      "price_new": "5999",
+      "price_old": "9000",
+      "desc": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan",
+      "image": "http://res.cloudinary.com/fpt-polytechnic-sv/image/upload/v1645507971/6_ixqrpl.jpg",
+      "id": 9
     }
   ],
+  "contacts": [],
+  "checkouts": [],
   "blogs": [
     {
       "title": "Loremmmm",
