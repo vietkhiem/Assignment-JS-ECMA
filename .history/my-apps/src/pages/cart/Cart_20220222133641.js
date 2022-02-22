@@ -23,9 +23,9 @@ const CartPage = {
                     <h1 class="text-4xl font-semibold leading-9 text-center text-gray-800 dark:text-gray-50 ">Your Shopping Cart</h1>
                 </div>
                 <div class="flex mt-10 mb-5">
-                    <h3 class="font-semibold text-gray-600 text-xs uppercase w-3/5">Product Details</h3>
+                    <h3 class="font-semibold text-gray-600 text-xs uppercase w-5/5">Product Details</h3>
                     <h3 class="font-semibold text-center text-gray-600 text-xs uppercase w-3/5 text-center">Quantity</h3>
-                    <h3 class="font-semibold text-center text-gray-600 text-xs uppercase w-3/5 text-center">Price</h3>
+                    <h3 class="font-semibold text-center text-gray-600 text-xs uppercase w-4/5 text-center">Price</h3>
                 </div>
                 <tbody>
                     ${cart.map((item) => /* html */ `
@@ -51,7 +51,7 @@ const CartPage = {
                     
                     
                     </div>
-                    <span class="text-center w-2/5 font-semibold text-sm pl-12 ">${item.price_new}$</span>
+                    <span class="text-center w-1/5 font-semibold text-sm">${item.price_new}$</span>
                 </div>
                 
                 `).join("")}

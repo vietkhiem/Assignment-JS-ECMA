@@ -82,7 +82,7 @@ const ProductsDetail = {
         btnAddToCart.addEventListener("click", async () => {
             const { data } = await get(id);
             addToCart({ ...data, quantity: +counter.value }, () => {
-                toastr.success("Add a successful product");
+                toastr.success("Thêm thành công");
             });
         });
     },

@@ -43,7 +43,14 @@ const Checkouts = {
                         <p class="text-lg dark:text-gray-300 leading-4 text-gray-600">Total Charges</p>
                         <p class="text-lg dark:text-gray-300 font-semibold leading-4 text-gray-600">$2790</p>
                     </div>
-                    
+                    <div class="flex justify-between w-full items-center">
+                        <p class="text-lg dark:text-gray-300 leading-4 text-gray-600">Shipping charges</p>
+                        <p class="text-lg dark:text-gray-300 font-semibold leading-4 text-gray-600">$90</p>
+                    </div>
+                    <div class="flex justify-between w-full items-center">
+                        <p class="text-lg dark:text-gray-300 leading-4 text-gray-600">Sub total</p>
+                        <p class="text-lg dark:text-gray-300 font-semibold leading-4 text-gray-600">$3520</p>
+                    </div>
                 </div>
                 <div class="flex justify-between w-full items-center mt-32">
                     <p class="text-xl dark:text-white font-semibold leading-4 text-gray-800">Estimated Total</p>

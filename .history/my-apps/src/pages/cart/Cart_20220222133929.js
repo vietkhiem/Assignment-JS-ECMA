@@ -51,7 +51,7 @@ const CartPage = {
                     
                     
                     </div>
-                    <span class="text-center w-2/5 font-semibold text-sm pl-12 ">${item.price_new}$</span>
+                    <span class="text-center w-2/5 font-semibold text-sm ml-15">${item.price_new}$</span>
                 </div>
                 
                 `).join("")}

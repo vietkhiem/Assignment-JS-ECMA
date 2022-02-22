@@ -4,15 +4,13 @@ import { decreaseQuantity, increaseQuantity, removeItemInCart } from "../../util
 import "toastr/build/toastr.min.css";
 import Footer from "../../components/Footer";
 import Nav from "../../components/Nav";
-import { $ } from "../../utils/selector";
 
 const CartPage = {
     render() {
         let cart = [];
         if (localStorage.getItem("cart")) {
             cart = JSON.parse(localStorage.getItem("cart"));
-        }
-        return /* html */ `
+            return /* html */ `
         ${Nav.render()}
         <div class= "max-w-7xl mx-auto">
             <body class="bg-gray-100">
@@ -23,9 +21,10 @@ const CartPage = {
                     <h1 class="text-4xl font-semibold leading-9 text-center text-gray-800 dark:text-gray-50 ">Your Shopping Cart</h1>
                 </div>
                 <div class="flex mt-10 mb-5">
-                    <h3 class="font-semibold text-gray-600 text-xs uppercase w-3/5">Product Details</h3>
-                    <h3 class="font-semibold text-center text-gray-600 text-xs uppercase w-3/5 text-center">Quantity</h3>
-                    <h3 class="font-semibold text-center text-gray-600 text-xs uppercase w-3/5 text-center">Price</h3>
+                    <h3 class="font-semibold text-gray-600 text-xs uppercase w-2/5">Product Details</h3>
+                    <h3 class="font-semibold text-center text-gray-600 text-xs uppercase w-1/5 text-center">Quantity</h3>
+                    <h3 class="font-semibold text-center text-gray-600 text-xs uppercase w-1/5 text-center">Price</h3>
+                    <h3 class="font-semibold text-center text-gray-600 text-xs uppercase w-1/5 text-center">Total</h3>
                 </div>
                 <tbody>
                     ${cart.map((item) => /* html */ `
@@ -42,7 +41,8 @@ const CartPage = {
 
                     </div>
                     <div class="flex justify-center w-1/5">
-
+                    
+                
                     <div class="flex">
                             <span data-id="${item.id}" onclick="minus()" class="btn btn-decrease focus:outline-none dark:text-white focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 cursor-pointer border border-gray-300 border-r-0 w-7 h-7 flex items-center justify-center pb-1">-</span>
                             <input id="counter" value="${item.quantity}" aria-label="input" class="border dark:text-white border-gray-300 dark:bg-transparent h-full text-center w-14 pb-1" type="text" value="1" />
@@ -51,7 +51,8 @@ const CartPage = {
                     
                     
                     </div>
-                    <span class="text-center w-2/5 font-semibold text-sm pl-12 ">${item.price_new}$</span>
+                    <span class="text-center w-1/5 font-semibold text-sm">${item.price_new}$</span>
+                    <span class="text-center w-1/5 font-semibold text-sm">$400.00</span>
                 </div>
                 
                 `).join("")}
@@ -88,46 +89,22 @@ const CartPage = {
             </div>
             ${Footer.render()}
         `;
+        }
     },
 
     afterRender() {
-        const itemTotalQuantity = $("#itemTotalQuantity");
-        const totalPrice = $("#totalPrice");
-
-        let cart = [];
-        let total = 0;
-        let quantity = 0;
-        cart = JSON.parse(localStorage.getItem("cart"));
-        console.log(cart);
-        if (cart.length > 0) {
-            cart.forEach((item) => {
-                total += (+item.price_new) * (+item.quantity);
-                quantity += item.quantity;
-            });
-            itemTotalQuantity.innerHTML = quantity;
-            totalPrice.innerHTML = total;
-        }
-
-        const btns = $(".btn");
+        const btns = document.querySelectorAll(".btn");
         btns.forEach((btn) => {
+            const { id } = btn.dataset;
             btn.addEventListener("click", () => {
-                const { id } = btn.dataset;
                 if (btn.classList.contains("btn-increase")) {
-                    itemTotalQuantity.innerHTML = +itemTotalQuantity.innerHTML + 1;
-                    increaseQuantity(id, () => {
-                        reRender(CartPage, "#app");
-                        toastr.success("Increase successfully");
-                    });
+                    increaseQuantity(id, () => reRender(CartPage, "#app"));
                 } else if (btn.classList.contains("btn-decrease")) {
-                    itemTotalQuantity.innerHTML = +itemTotalQuantity.innerHTML - 1;
-                    decreaseQuantity(id, () => {
-                        reRender(CartPage, "#app");
-                        toastr.success("Decrease successfully");
-                    });
+                    decreaseQuantity(id, () => reRender(CartPage, "#app"));
                 } else {
                     removeItemInCart(id, () => {
+                        toastr.success("Delete Product Successfully");
                         reRender(CartPage, "#app");
-                        toastr.success("Delete successfully");
                     });
                 }
             });

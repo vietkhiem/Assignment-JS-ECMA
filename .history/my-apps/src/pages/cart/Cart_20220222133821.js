@@ -51,7 +51,7 @@ const CartPage = {
                     
                     
                     </div>
-                    <span class="text-center w-2/5 font-semibold text-sm pl-12 ">${item.price_new}$</span>
+                    <span class="text-center w-1/5 font-semibold text-sm">${item.price_new}$</span>
                 </div>
                 
                 `).join("")}
@@ -74,7 +74,7 @@ const CartPage = {
                     </div>
                 <button class="bg-red-500 hover:bg-red-600 px-5 py-2 text-sm text-white uppercase">Apply</button>
                 <div class="border-t mt-8">
-                    <div class="flex font-semibold justify-between py-6 text-sm uppercase">
+                    <div class="flex font-semibold justify-between py-10 text-sm uppercase">
                         <p>Items: <span id="itemTotalQuantity"></span></p>
                         <p>Price: <span id="totalPrice"></span> $</p>
                     </div>
