@@ -54,7 +54,7 @@ router.on({
     "/cart": () => print(CartPage),
     "/products": () => print(ProductsPage),
     "/productscate": () => print(ProductsCate),
-    "/checkout": () => print(Checkouts),
+    "/checkouts": () => print(Checkouts),
     "/sign-in": () => print(Signin),
     "/sign-up": () => print(Signup),
     "/products-detail/:id": ({ data }) => {
