@@ -116,7 +116,15 @@
     }
   ],
   "contacts": [],
-  "checkouts": [],
+  "checkouts": [
+    {
+      "name": "admin",
+      "email": "admin@gmail.com",
+      "address": "",
+      "phone": "",
+      "id": 1
+    }
+  ],
   "blogs": [
     {
       "title": "Loremmmm",

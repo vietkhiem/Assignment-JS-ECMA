@@ -5,17 +5,13 @@ import Nav from "../../components/Nav";
 import "toastr/build/toastr.min.css";
 
 const Checkouts = {
-    async render() {
+    render() {
         let cart = [];
-        let user = [];
         if (localStorage.getItem("cart")) {
             cart = JSON.parse(localStorage.getItem("cart"));
         }
-        if (localStorage.getItem("user")) {
-            user = JSON.parse(localStorage.getItem("user"));
-        }
         return /* html */ `
-        ${await Nav.render()}
+        ${Nav.render()}
         <div class="flex justify-center items-center 2xl:container 2xl:mx-auto lg:py-16 md:py-12 py-9 px-4 md:px-6 lg:px-20 xl:px-44">
         <div class="flex w-full sm:w-9/12 lg:w-full flex-col lg:flex-row justify-center items-center lg:space-x-10 2xl:space-x-36 space-y-12 lg:space-y-0">
             <div class="flex w-full flex-col justify-start items-start">
@@ -30,11 +26,11 @@ const Checkouts = {
                 </div>
                 <form action="" id="form-checkout" class="my-10 ">
                         
-                        <input id="fullname" value="${localStorage.getItem("user") ? user.username : ""}" class="my-5 px-2 focus:outline-none dark:bg-transparent dark:text-gray-400 dark:placeholder-gray-400 focus:ring-2 focus:ring-gray-500 border-b border-gray-200 leading-4 text-base placeholder-gray-600 py-4 w-full" type="text" placeholder="Full Name" />
-                        <input id="emailCheckOut" value="${localStorage.getItem("user") ? user.email : ""}" class="my-5 px-2 focus:outline-none dark:bg-transparent dark:text-gray-400 dark:placeholder-gray-400 focus:ring-2 focus:ring-gray-500 border-b border-gray-200 leading-4 text-base placeholder-gray-600 py-4 w-full" type="text" placeholder="Email" />
+                        <input id="fullname" class="my-5 px-2 focus:outline-none dark:bg-transparent dark:text-gray-400 dark:placeholder-gray-400 focus:ring-2 focus:ring-gray-500 border-b border-gray-200 leading-4 text-base placeholder-gray-600 py-4 w-full" type="text" placeholder="Full Name" />
+                        <input id="email" class="my-5 px-2 focus:outline-none dark:bg-transparent dark:text-gray-400 dark:placeholder-gray-400 focus:ring-2 focus:ring-gray-500 border-b border-gray-200 leading-4 text-base placeholder-gray-600 py-4 w-full" type="text" placeholder="Email" />
                         <input id="phone" class="my-5 focus:outline-none dark:text-gray-400 dark:bg-transparent dark:placeholder-gray-400 focus:ring-2 focus:ring-gray-500 px-2 border-b border-gray-200 leading-4 text-base placeholder-gray-600 py-4 w-full" type="text" placeholder="Phone Number" />
                         <input id="address" class="my-5 px-2 focus:outline-none dark:bg-transparent dark:text-gray-400 dark:placeholder-gray-400 focus:ring-2 focus:ring-gray-500 border-b border-gray-200 leading-4 text-base placeholder-gray-600 py-4 w-full" type="text" placeholder="Address" />
-                    <button class="focus:outline-none focus:ring-2 dark:bg-gray-800 dark:text-white focus:ring-gray-500 focus:ring-offset-2 mt-8 text-base font-medium focus:ring-2 focus:ring-ocus:ring-gray-800 leading-4 hover:bg-black py-4 w-full md:w-4/12 lg:w-full text-white bg-gray-800">Order <span id="order-output"></span></button>
+                    <button class="focus:outline-none focus:ring-2 dark:bg-gray-800 dark:text-white focus:ring-gray-500 focus:ring-offset-2 mt-8 text-base font-medium focus:ring-2 focus:ring-ocus:ring-gray-800 leading-4 hover:bg-black py-4 w-full md:w-4/12 lg:w-full text-white bg-gray-800">Order</button>
                     </form>
             </div>
             
@@ -42,55 +38,49 @@ const Checkouts = {
                 <div>
                     <h1 class="text-2xl  dark:text-white font-semibold leading-6 text-gray-800">Order Summary</h1>
                 </div>
+                ${cart.map((item) => /* html */ `
                 <div class="flex mt-7 flex-col items-end w-full space-y-6">
-                ${cart.map((item) => `
+                        <div class="flex justify-between w-full items-center">
+                            <p class="text-lg dark:text-gray-300 leading-4 text-gray-600">Product Name</p>
+                            <p class="text-lg dark:text-gray-300 font-semibold leading-4 text-gray-600">${item.name}</p>
+                </div>
+            `).join("")}
+                </div>
+                <div class="flex mt-7 flex-col items-end w-full space-y-6">
+                    
                     <div class="flex justify-between w-full items-center">
-                        <p class="text-lg dark:text-gray-300 leading-4 text-gray-600">Product Image</p>
-                        <img src=" ${item.image} " alt="Product" class="rounded w-1/4" id="img-oder">
+                        <p class="text-lg dark:text-gray-300 leading-4 text-gray-600">Total items</p>
+                        <p class="text-lg dark:text-gray-300 font-semibold leading-4 text-gray-600">20</p>
                     </div>
                     <div class="flex justify-between w-full items-center">
-                        <p class="text-lg dark:text-gray-300 leading-4 text-gray-600">Product Name</p>
-                        <p class="text-lg dark:text-gray-300 font-semibold leading-4 text-gray-600">${item.name}</p>
+                        <p class="text-lg dark:text-gray-300 leading-4 text-gray-600">Total Charges</p>
+                        <p class="text-lg dark:text-gray-300 font-semibold leading-4 text-gray-600">$2790</p>
                     </div>
-                    <div class="flex justify-between w-full items-center">
-                        <p class="text-lg dark:text-gray-300 leading-4 text-gray-600">Unit Price</p>
-                        <p class="text-lg dark:text-gray-300 font-semibold leading-4 text-gray-600">${item.price_new}$</p>
-                    </div>
-                    <div class="flex justify-between w-full items-center">
-                        <p class="text-lg dark:text-gray-300 leading-4 text-gray-600">Quantity * Unit Price</p>
-                        <p class="text-lg dark:text-gray-300 font-semibold leading-4 text-gray-600">${item.quantity} x ${new Intl.NumberFormat("de-DE", { style: "currency", currency: "USD" }).format(item.price_new)}</p>
-                    </div>
-                    <div class="flex justify-between w-full items-center">
-                        <p class="text-lg dark:text-gray-300 leading-4 text-gray-600">Total</p>
-                        <p class="text-lg dark:text-gray-300 font-semibold leading-4 text-gray-600">${new Intl.NumberFormat("de-DE", { style: "currency", currency: "USD" }).format((item.price_new) * (item.quantity))}</p>
-                    </div>`).join("")}
+                    
                 </div>
                 <div class="flex justify-between w-full items-center mt-32">
-                    <p class="text-xl dark:text-white font-semibold leading-4 text-gray-800">Estimated Total<span id="price-output"></span></p>
-                    
+                    <p class="text-xl dark:text-white font-semibold leading-4 text-gray-800">Estimated Total</p>
+                    <p class="text-lg dark:text-white font-semibold leading-4 text-gray-800">$2900</p>
                 </div>
             </div>
         </div>
     </div>
-
+  
     ${Footer.render()}
         `;
     },
     afterRender() {
-        Nav.afterRender();
-
-        const cart = JSON.parse(localStorage.getItem("cart"));
-        const output = document.querySelector("#order-output");
-        const output2 = document.querySelector("#price-output");
-
         const formCheckout = document.querySelector("#form-checkout");
+
         // submit form
         formCheckout.addEventListener("submit", async (e) => {
             e.preventDefault();
+
             // Lấy giá trị của file upload cho sử dụng formData
+
             add({
                 name: document.querySelector("#fullname").value,
-                email: document.querySelector("#emailCheckOut").value,
+                email: document.querySelector("#email").value,
                 address: document.querySelector("#address").value,
                 phone: document.querySelector("#phone").value,
 

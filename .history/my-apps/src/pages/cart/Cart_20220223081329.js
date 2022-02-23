@@ -74,7 +74,7 @@ const CartPage = {
                     </div>
                 <button class="bg-red-500 hover:bg-red-600 px-5 py-2 text-sm text-white uppercase">Apply</button>
                 <div class="border-t mt-8">
-                    <div class="flex font-semibold justify-between py-6 text-sm uppercase">
+                    <div class="flex font-semibold justify-between py-4 text-sm uppercase">
                         <p>Items: <span id="totalItem"></span></p>
                         <p>Total Price: <span id="totalPrice"></span> $</p>
                     </div>

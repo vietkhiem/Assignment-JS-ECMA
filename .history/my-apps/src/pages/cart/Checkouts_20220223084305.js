@@ -31,10 +31,10 @@ const Checkouts = {
                 <form action="" id="form-checkout" class="my-10 ">
                         
                         <input id="fullname" value="${localStorage.getItem("user") ? user.username : ""}" class="my-5 px-2 focus:outline-none dark:bg-transparent dark:text-gray-400 dark:placeholder-gray-400 focus:ring-2 focus:ring-gray-500 border-b border-gray-200 leading-4 text-base placeholder-gray-600 py-4 w-full" type="text" placeholder="Full Name" />
-                        <input id="emailCheckOut" value="${localStorage.getItem("user") ? user.email : ""}" class="my-5 px-2 focus:outline-none dark:bg-transparent dark:text-gray-400 dark:placeholder-gray-400 focus:ring-2 focus:ring-gray-500 border-b border-gray-200 leading-4 text-base placeholder-gray-600 py-4 w-full" type="text" placeholder="Email" />
+                        <input id="email" value="${localStorage.getItem("user") ? user.email : ""}" class="my-5 px-2 focus:outline-none dark:bg-transparent dark:text-gray-400 dark:placeholder-gray-400 focus:ring-2 focus:ring-gray-500 border-b border-gray-200 leading-4 text-base placeholder-gray-600 py-4 w-full" type="text" placeholder="Email" />
                         <input id="phone" class="my-5 focus:outline-none dark:text-gray-400 dark:bg-transparent dark:placeholder-gray-400 focus:ring-2 focus:ring-gray-500 px-2 border-b border-gray-200 leading-4 text-base placeholder-gray-600 py-4 w-full" type="text" placeholder="Phone Number" />
                         <input id="address" class="my-5 px-2 focus:outline-none dark:bg-transparent dark:text-gray-400 dark:placeholder-gray-400 focus:ring-2 focus:ring-gray-500 border-b border-gray-200 leading-4 text-base placeholder-gray-600 py-4 w-full" type="text" placeholder="Address" />
-                    <button class="focus:outline-none focus:ring-2 dark:bg-gray-800 dark:text-white focus:ring-gray-500 focus:ring-offset-2 mt-8 text-base font-medium focus:ring-2 focus:ring-ocus:ring-gray-800 leading-4 hover:bg-black py-4 w-full md:w-4/12 lg:w-full text-white bg-gray-800">Order <span id="order-output"></span></button>
+                    <button class="focus:outline-none focus:ring-2 dark:bg-gray-800 dark:text-white focus:ring-gray-500 focus:ring-offset-2 mt-8 text-base font-medium focus:ring-2 focus:ring-ocus:ring-gray-800 leading-4 hover:bg-black py-4 w-full md:w-4/12 lg:w-full text-white bg-gray-800">Order</button>
                     </form>
             </div>
             
@@ -58,17 +58,17 @@ const Checkouts = {
                     </div>
                     <div class="flex justify-between w-full items-center">
                         <p class="text-lg dark:text-gray-300 leading-4 text-gray-600">Quantity * Unit Price</p>
-                        <p class="text-lg dark:text-gray-300 font-semibold leading-4 text-gray-600">${item.quantity} x ${new Intl.NumberFormat("de-DE", { style: "currency", currency: "USD" }).format(item.price_new)}</p>
+                        <p class="text-lg dark:text-gray-300 font-semibold leading-4 text-gray-600">${item.quantity} x ${new Intl.NumberFormat("de-DE", { style: "currency", currency: "vnd" }).format(item.price_new)}</p>
                     </div>
                     <div class="flex justify-between w-full items-center">
                         <p class="text-lg dark:text-gray-300 leading-4 text-gray-600">Total</p>
-                        <p class="text-lg dark:text-gray-300 font-semibold leading-4 text-gray-600">${new Intl.NumberFormat("de-DE", { style: "currency", currency: "USD" }).format((item.price_new) * (item.quantity))}</p>
-                    </div>`).join("")}
+                        <p class="text-lg dark:text-gray-300 font-semibold leading-4 text-gray-600">${new Intl.NumberFormat("de-DE", { style: "currency", currency: "VND" }).format((item.price_new) * (item.quantity))}</p>
+                    </div>
                 </div>
                 <div class="flex justify-between w-full items-center mt-32">
-                    <p class="text-xl dark:text-white font-semibold leading-4 text-gray-800">Estimated Total<span id="price-output"></span></p>
-                    
-                </div>
+                    <p class="text-xl dark:text-white font-semibold leading-4 text-gray-800">Estimated Total</p>
+                    <p class="text-lg dark:text-white font-semibold leading-4 text-gray-800">${new Intl.NumberFormat("de-DE", { style: "currency", currency: "USD" }).format((item.price_new) * (item.quantity))}$</p>
+                </div>`).join("")}
             </div>
         </div>
     </div>
@@ -77,12 +77,6 @@ const Checkouts = {
         `;
     },
     afterRender() {
-        Nav.afterRender();
-
-        const cart = JSON.parse(localStorage.getItem("cart"));
-        const output = document.querySelector("#order-output");
-        const output2 = document.querySelector("#price-output");
-
         const formCheckout = document.querySelector("#form-checkout");
         // submit form
         formCheckout.addEventListener("submit", async (e) => {
@@ -90,7 +84,7 @@ const Checkouts = {
             // Lấy giá trị của file upload cho sử dụng formData
             add({
                 name: document.querySelector("#fullname").value,
-                email: document.querySelector("#emailCheckOut").value,
+                email: document.querySelector("#email").value,
                 address: document.querySelector("#address").value,
                 phone: document.querySelector("#phone").value,
 

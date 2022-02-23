@@ -76,7 +76,7 @@ const CartPage = {
                 <div class="border-t mt-8">
                     <div class="flex font-semibold justify-between py-6 text-sm uppercase">
                         <p>Items: <span id="totalItem"></span></p>
-                        <p>Total Price: <span id="totalPrice"></span> $</p>
+                        <p>Price: <span id="totalPrice"></span> $</p>
                     </div>
                     <a href="/checkouts"><button class="bg-indigo-500 font-semibold hover:bg-indigo-600 py-3 text-sm text-white uppercase w-full">Checkout</button></a>
                 </div>
@@ -97,14 +97,14 @@ const CartPage = {
         let cart = [];
         let total = 0;
         let quantity = 0;
-
         cart = JSON.parse(localStorage.getItem("cart"));
+        console.log(cart);
         if (cart.length > 0) {
             cart.forEach((item) => {
                 total += (+item.price_new) * (+item.quantity);
                 quantity += item.quantity;
             });
-            totalItem.innerHTML = quantity;
+            itemTotalQuantity.innerHTML = quantity;
             totalPrice.innerHTML = total;
         }
 
@@ -113,13 +113,13 @@ const CartPage = {
             btn.addEventListener("click", () => {
                 const { id } = btn.dataset;
                 if (btn.classList.contains("btn-increase")) {
-                    totalItem.innerHTML = +totalItem.innerHTML + 1;
+                    itemTotalQuantity.innerHTML = +itemTotalQuantity.innerHTML + 1;
                     increaseQuantity(id, () => {
                         reRender(CartPage, "#app");
                         toastr.success("Increase successfully");
                     });
                 } else if (btn.classList.contains("btn-decrease")) {
-                    totalItem.innerHTML = +totalItem.innerHTML - 1;
+                    itemTotalQuantity.innerHTML = +itemTotalQuantity.innerHTML - 1;
                     decreaseQuantity(id, () => {
                         reRender(CartPage, "#app");
                         toastr.success("Decrease successfully");

@@ -79,10 +79,6 @@ const Checkouts = {
     afterRender() {
         Nav.afterRender();
 
-        const cart = JSON.parse(localStorage.getItem("cart"));
-        const output = document.querySelector("#order-output");
-        const output2 = document.querySelector("#price-output");
-
         const formCheckout = document.querySelector("#form-checkout");
         // submit form
         formCheckout.addEventListener("submit", async (e) => {

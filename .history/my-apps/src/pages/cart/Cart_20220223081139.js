@@ -76,7 +76,7 @@ const CartPage = {
                 <div class="border-t mt-8">
                     <div class="flex font-semibold justify-between py-6 text-sm uppercase">
                         <p>Items: <span id="totalItem"></span></p>
-                        <p>Total Price: <span id="totalPrice"></span> $</p>
+                        <p>Price: <span id="totalPrice"></span> $</p>
                     </div>
                     <a href="/checkouts"><button class="bg-indigo-500 font-semibold hover:bg-indigo-600 py-3 text-sm text-white uppercase w-full">Checkout</button></a>
                 </div>
@@ -99,6 +99,7 @@ const CartPage = {
         let quantity = 0;
 
         cart = JSON.parse(localStorage.getItem("cart"));
+        console.log(cart);
         if (cart.length > 0) {
             cart.forEach((item) => {
                 total += (+item.price_new) * (+item.quantity);

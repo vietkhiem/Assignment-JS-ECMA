@@ -63,12 +63,12 @@ const Checkouts = {
                     <div class="flex justify-between w-full items-center">
                         <p class="text-lg dark:text-gray-300 leading-4 text-gray-600">Total</p>
                         <p class="text-lg dark:text-gray-300 font-semibold leading-4 text-gray-600">${new Intl.NumberFormat("de-DE", { style: "currency", currency: "USD" }).format((item.price_new) * (item.quantity))}</p>
-                    </div>`).join("")}
+                    </div>
                 </div>
                 <div class="flex justify-between w-full items-center mt-32">
-                    <p class="text-xl dark:text-white font-semibold leading-4 text-gray-800">Estimated Total<span id="price-output"></span></p>
-                    
-                </div>
+                    <p class="text-xl dark:text-white font-semibold leading-4 text-gray-800">Estimated Total</p>
+                    <p class="text-lg dark:text-white font-semibold leading-4 text-gray-800">${new Intl.NumberFormat("de-DE", { style: "currency", currency: "USD" }).format((item.price_new) * (item.quantity))}</p>
+                </div>`).join("")}
             </div>
         </div>
     </div>
@@ -78,11 +78,6 @@ const Checkouts = {
     },
     afterRender() {
         Nav.afterRender();
-
-        const cart = JSON.parse(localStorage.getItem("cart"));
-        const output = document.querySelector("#order-output");
-        const output2 = document.querySelector("#price-output");
-
         const formCheckout = document.querySelector("#form-checkout");
         // submit form
         formCheckout.addEventListener("submit", async (e) => {

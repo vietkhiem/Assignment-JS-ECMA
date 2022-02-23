@@ -80,8 +80,8 @@ const Checkouts = {
         Nav.afterRender();
 
         const cart = JSON.parse(localStorage.getItem("cart"));
-        const output = document.querySelector("#order-output");
-        const output2 = document.querySelector("#price-output");
+        const output = document.querySelector("#sum-price-output");
+        const output2 = document.querySelector("#sum-price-output2");
 
         const formCheckout = document.querySelector("#form-checkout");
         // submit form
