@@ -94,19 +94,23 @@ const Checkouts = {
 
         formCheckout.validate({
             rules: {
-                address: "required",
-                email: "required",
+                emailCheckOut: {
+                    required: true,
+                    minlength: 5,
+                },
                 phone: {
                     required: true,
                     minlength: 5,
                 },
             },
             messages: {
-                emailCheckOut: "Required to enter this field!",
-                address: "Required to enter this field!",
+                emailCheckOut: {
+                    required: "Bắt buộc phải nhập trường này!",
+                    minlength: "Nhập ít nhất 5 ký tự",
+                },
                 phone: {
-                    required: "Required to enter this field!",
-                    minlength: "Enter at least 5 characters",
+                    required: "Bắt buộc phải nhập trường này!",
+                    minlength: "Nhập ít nhất 5 ký tự",
                 },
             },
             submitHandler() {

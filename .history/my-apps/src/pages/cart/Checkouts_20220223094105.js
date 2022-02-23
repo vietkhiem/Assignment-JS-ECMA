@@ -36,7 +36,7 @@ const Checkouts = {
                         <input type="email" id="emailCheckOut" name="emailCheckOut" value="${localStorage.getItem("user") ? user.email : ""}" class="my-5 px-2 focus:outline-none dark:bg-transparent dark:text-gray-400 dark:placeholder-gray-400 focus:ring-2 focus:ring-gray-500 border-b border-gray-200 leading-4 text-base placeholder-gray-600 py-4 w-full" type="text" placeholder="Email" />
                         <input type="" id="phone" name="phone" class="my-5 focus:outline-none dark:text-gray-400 dark:bg-transparent dark:placeholder-gray-400 focus:ring-2 focus:ring-gray-500 px-2 border-b border-gray-200 leading-4 text-base placeholder-gray-600 py-4 w-full" type="text" placeholder="Phone Number" />
                         <input id="address" name="address" class="my-5 px-2 focus:outline-none dark:bg-transparent dark:text-gray-400 dark:placeholder-gray-400 focus:ring-2 focus:ring-gray-500 border-b border-gray-200 leading-4 text-base placeholder-gray-600 py-4 w-full" type="text" placeholder="Address" />
-                    <button type="submit" class="focus:outline-none focus:ring-2 dark:bg-gray-800 dark:text-white focus:ring-gray-500 focus:ring-offset-2 mt-8 text-base font-medium focus:ring-2 focus:ring-ocus:ring-gray-800 leading-4 hover:bg-black py-4 w-full md:w-4/12 lg:w-full text-white bg-gray-800">Order Total : <span id="order-output"></span></button>
+                    <button type="submit" class="focus:outline-none focus:ring-2 dark:bg-gray-800 dark:text-white focus:ring-gray-500 focus:ring-offset-2 mt-8 text-base font-medium focus:ring-2 focus:ring-ocus:ring-gray-800 leading-4 hover:bg-black py-4 w-full md:w-4/12 lg:w-full text-white bg-gray-800">Order Total: <span id="order-output"></span></button>
                 
                 </div>
                 </form>
@@ -80,43 +80,28 @@ const Checkouts = {
     },
     afterRender() {
         Nav.afterRender();
-        const formCheckout = $("#form-checkout");
+
         const cart = JSON.parse(localStorage.getItem("cart"));
-        const outOrder = document.querySelector("#order-output");
-        const outPrice = document.querySelector("#price-output");
+        const outorder = document.querySelector("#order-output");
+        const outprice = document.querySelector("#price-output");
         let sum = 0;
         for (let i = 0; i < cart.length; i++) {
             const percent = cart[i].price_new * cart[i].quantity;
             sum += percent;
-            outOrder.innerHTML = `${sum.toLocaleString("de-DE")} $`;
-            outPrice.innerHTML = `${sum.toLocaleString("de-DE")} $`;
+            outorder.innerHTML = `${sum.toLocaleString("de-DE")} $`;
+            outprice.innerHTML = `${sum.toLocaleString("de-DE")} $`;
         }
 
+        const formCheckout = $("#form-checkout");
         formCheckout.validate({
-            rules: {
-                address: "required",
-                email: "required",
-                phone: {
-                    required: true,
-                    minlength: 5,
-                },
-            },
-            messages: {
-                emailCheckOut: "Required to enter this field!",
-                address: "Required to enter this field!",
-                phone: {
-                    required: "Required to enter this field!",
-                    minlength: "Enter at least 5 characters",
-                },
-            },
-            submitHandler() {
+            submitHandler: () => {
                 async function addOder() {
                     add({
                         name: document.querySelector("#fullname").value,
                         email: document.querySelector("#emailCheckOut").value,
                         address: document.querySelector("#address").value,
                         phone: document.querySelector("#phone").value,
-                        oderprice: outOrder.innerHTML,
+                        oderprice: outorder.innerHTML,
                     }).then(async () => {
                         localStorage.removeItem("cart");
                         toastr.success("Order has been sent");

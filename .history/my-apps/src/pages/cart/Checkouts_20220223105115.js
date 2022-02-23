@@ -80,7 +80,7 @@ const Checkouts = {
     },
     afterRender() {
         Nav.afterRender();
-        const formCheckout = $("#form-checkout");
+
         const cart = JSON.parse(localStorage.getItem("cart"));
         const outOrder = document.querySelector("#order-output");
         const outPrice = document.querySelector("#price-output");
@@ -92,23 +92,8 @@ const Checkouts = {
             outPrice.innerHTML = `${sum.toLocaleString("de-DE")} $`;
         }
 
+        const formCheckout = $("#form-checkout");
         formCheckout.validate({
-            rules: {
-                address: "required",
-                email: "required",
-                phone: {
-                    required: true,
-                    minlength: 5,
-                },
-            },
-            messages: {
-                emailCheckOut: "Required to enter this field!",
-                address: "Required to enter this field!",
-                phone: {
-                    required: "Required to enter this field!",
-                    minlength: "Enter at least 5 characters",
-                },
-            },
             submitHandler() {
                 async function addOder() {
                     add({

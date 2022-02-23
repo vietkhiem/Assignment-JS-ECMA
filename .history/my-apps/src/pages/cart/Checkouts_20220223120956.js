@@ -102,12 +102,13 @@ const Checkouts = {
                 },
             },
             messages: {
-                emailCheckOut: "Required to enter this field!",
-                address: "Required to enter this field!",
+                emailCheckOut: "Bắt buộc phải nhập trường này!",
+                address: "Bắt buộc phải nhập trường này!",
                 phone: {
-                    required: "Required to enter this field!",
-                    minlength: "Enter at least 5 characters",
+                    required: "Bắt buộc phải nhập trường này!",
+                    minlength: "Nhập ít nhất 5 ký tự",
                 },
+
             },
             submitHandler() {
                 async function addOder() {

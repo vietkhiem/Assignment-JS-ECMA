@@ -93,22 +93,6 @@ const Checkouts = {
         }
 
         formCheckout.validate({
-            rules: {
-                address: "required",
-                email: "required",
-                phone: {
-                    required: true,
-                    minlength: 5,
-                },
-            },
-            messages: {
-                emailCheckOut: "Required to enter this field!",
-                address: "Required to enter this field!",
-                phone: {
-                    required: "Required to enter this field!",
-                    minlength: "Enter at least 5 characters",
-                },
-            },
             submitHandler() {
                 async function addOder() {
                     add({

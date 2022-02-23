@@ -113,6 +113,14 @@
       "desc": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan",
       "image": "http://res.cloudinary.com/fpt-polytechnic-sv/image/upload/v1645507971/6_ixqrpl.jpg",
       "id": 9
+    },
+    {
+      "name": "Yumiiiiii Yaaaaaaa",
+      "price_new": "6999",
+      "price_old": "9000",
+      "desc": "haha",
+      "image": "http://res.cloudinary.com/fpt-polytechnic-sv/image/upload/v1645594789/7_b4b0m2.jpg",
+      "id": 10
     }
   ],
   "contacts": [],
@@ -120,9 +128,27 @@
     {
       "name": "admin",
       "email": "admin@gmail.com",
+      "address": "aaaaaa",
+      "phone": "0965225408",
+      "oderprice": "4.500 $",
+      "id": 2
+    },
+    {
+      "name": "admin",
+      "email": "admin@gmail.com",
+      "address": "aaaaaa",
+      "phone": "0965225408",
+      "oderprice": "900 $",
+      "oderimg": "",
+      "id": 3
+    },
+    {
+      "name": "admin",
+      "email": "admin@gmail.com",
       "address": "",
       "phone": "",
-      "id": 1
+      "oderprice": "900 $",
+      "id": 4
     }
   ],
   "blogs": [

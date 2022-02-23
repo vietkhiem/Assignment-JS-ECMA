@@ -106,7 +106,7 @@ const Checkouts = {
                 address: "Required to enter this field!",
                 phone: {
                     required: "Required to enter this field!",
-                    minlength: "Enter at least 5 characters",
+                    minlength: "Nhập ít nhất 5 ký tự",
                 },
             },
             submitHandler() {

@@ -80,43 +80,28 @@ const Checkouts = {
     },
     afterRender() {
         Nav.afterRender();
-        const formCheckout = $("#form-checkout");
+
         const cart = JSON.parse(localStorage.getItem("cart"));
-        const outOrder = document.querySelector("#order-output");
-        const outPrice = document.querySelector("#price-output");
+        const outorder = document.querySelector("#order-output");
+        const outprice = document.querySelector("#price-output");
         let sum = 0;
         for (let i = 0; i < cart.length; i++) {
             const percent = cart[i].price_new * cart[i].quantity;
             sum += percent;
-            outOrder.innerHTML = `${sum.toLocaleString("de-DE")} $`;
-            outPrice.innerHTML = `${sum.toLocaleString("de-DE")} $`;
+            outorder.innerHTML = `${sum.toLocaleString("de-DE")} $`;
+            outprice.innerHTML = `${sum.toLocaleString("de-DE")} $`;
         }
 
+        const formCheckout = $("#form-checkout");
         formCheckout.validate({
-            rules: {
-                address: "required",
-                email: "required",
-                phone: {
-                    required: true,
-                    minlength: 5,
-                },
-            },
-            messages: {
-                emailCheckOut: "Required to enter this field!",
-                address: "Required to enter this field!",
-                phone: {
-                    required: "Required to enter this field!",
-                    minlength: "Enter at least 5 characters",
-                },
-            },
-            submitHandler() {
+            submitHandler: () => {
                 async function addOder() {
                     add({
                         name: document.querySelector("#fullname").value,
                         email: document.querySelector("#emailCheckOut").value,
                         address: document.querySelector("#address").value,
                         phone: document.querySelector("#phone").value,
-                        oderprice: outOrder.innerHTML,
+                        oderprice: outorder.innerHTML,
                     }).then(async () => {
                         localStorage.removeItem("cart");
                         toastr.success("Order has been sent");

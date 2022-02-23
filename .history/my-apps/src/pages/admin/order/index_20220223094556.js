@@ -131,7 +131,7 @@ const AdminOrder = {
                                             <td class="px-6 py-4 whitespace-nowrap">
                                                 <div class="text-sm text-gray-900">${checkout.phone}</div>
                                             </td>
-                                            <td class="px-6 py-4 whitespace-nowrap ">
+                                            <td class="px-6 py-4 whitespace-nowrap pr-12">
                                                 <div class="text-sm text-gray-900">${checkout.oderprice}</div>
                                             </td>
                                             <td class="px-6 py-4 whitespace-nowrap">

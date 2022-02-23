@@ -32,14 +32,14 @@ const Checkouts = {
                 </div>
                 <form action="" id="form-checkout" class="my-10 ">
                         
-                        <input type="text" id="fullname" name="fullname" value="${localStorage.getItem("user") ? user.username : ""}" class="my-5 px-2 focus:outline-none dark:bg-transparent dark:text-gray-400 dark:placeholder-gray-400 focus:ring-2 focus:ring-gray-500 border-b border-gray-200 leading-4 text-base placeholder-gray-600 py-4 w-full" type="text" placeholder="Full Name" />
-                        <input type="email" id="emailCheckOut" name="emailCheckOut" value="${localStorage.getItem("user") ? user.email : ""}" class="my-5 px-2 focus:outline-none dark:bg-transparent dark:text-gray-400 dark:placeholder-gray-400 focus:ring-2 focus:ring-gray-500 border-b border-gray-200 leading-4 text-base placeholder-gray-600 py-4 w-full" type="text" placeholder="Email" />
-                        <input type="" id="phone" name="phone" class="my-5 focus:outline-none dark:text-gray-400 dark:bg-transparent dark:placeholder-gray-400 focus:ring-2 focus:ring-gray-500 px-2 border-b border-gray-200 leading-4 text-base placeholder-gray-600 py-4 w-full" type="text" placeholder="Phone Number" />
-                        <input id="address" name="address" class="my-5 px-2 focus:outline-none dark:bg-transparent dark:text-gray-400 dark:placeholder-gray-400 focus:ring-2 focus:ring-gray-500 border-b border-gray-200 leading-4 text-base placeholder-gray-600 py-4 w-full" type="text" placeholder="Address" />
-                    <button type="submit" class="focus:outline-none focus:ring-2 dark:bg-gray-800 dark:text-white focus:ring-gray-500 focus:ring-offset-2 mt-8 text-base font-medium focus:ring-2 focus:ring-ocus:ring-gray-800 leading-4 hover:bg-black py-4 w-full md:w-4/12 lg:w-full text-white bg-gray-800">Order Total : <span id="order-output"></span></button>
-                
-                </div>
-                </form>
+                        <input id="fullname" value="${localStorage.getItem("user") ? user.username : ""}" class="my-5 px-2 focus:outline-none dark:bg-transparent dark:text-gray-400 dark:placeholder-gray-400 focus:ring-2 focus:ring-gray-500 border-b border-gray-200 leading-4 text-base placeholder-gray-600 py-4 w-full" type="text" placeholder="Full Name" />
+                        <input id="emailCheckOut" value="${localStorage.getItem("user") ? user.email : ""}" class="my-5 px-2 focus:outline-none dark:bg-transparent dark:text-gray-400 dark:placeholder-gray-400 focus:ring-2 focus:ring-gray-500 border-b border-gray-200 leading-4 text-base placeholder-gray-600 py-4 w-full" type="text" placeholder="Email" />
+                        <input id="phone" class="my-5 focus:outline-none dark:text-gray-400 dark:bg-transparent dark:placeholder-gray-400 focus:ring-2 focus:ring-gray-500 px-2 border-b border-gray-200 leading-4 text-base placeholder-gray-600 py-4 w-full" type="text" placeholder="Phone Number" />
+                        <input id="address" class="my-5 px-2 focus:outline-none dark:bg-transparent dark:text-gray-400 dark:placeholder-gray-400 focus:ring-2 focus:ring-gray-500 border-b border-gray-200 leading-4 text-base placeholder-gray-600 py-4 w-full" type="text" placeholder="Address" />
+                    <button class="focus:outline-none focus:ring-2 dark:bg-gray-800 dark:text-white focus:ring-gray-500 focus:ring-offset-2 mt-8 text-base font-medium focus:ring-2 focus:ring-ocus:ring-gray-800 leading-4 hover:bg-black py-4 w-full md:w-4/12 lg:w-full text-white bg-gray-800">Order <span id="order-output"></span></button>
+                    </form>
+            </div>
+            
             <div class="flex flex-col justify-start items-start bg-gray-50 dark:bg-gray-800 w-full p-6 md:p-14">
                 <div>
                     <h1 class="text-2xl  dark:text-white font-semibold leading-6 text-gray-800">Order Summary</h1>
@@ -80,50 +80,32 @@ const Checkouts = {
     },
     afterRender() {
         Nav.afterRender();
-        const formCheckout = $("#form-checkout");
+
         const cart = JSON.parse(localStorage.getItem("cart"));
-        const outOrder = document.querySelector("#order-output");
-        const outPrice = document.querySelector("#price-output");
+        const outorder = document.querySelector("#order-output");
+        const outputprice = document.querySelector("#price-output");
         let sum = 0;
         for (let i = 0; i < cart.length; i++) {
             const percent = cart[i].price_new * cart[i].quantity;
             sum += percent;
-            outOrder.innerHTML = `${sum.toLocaleString("de-DE")} $`;
-            outPrice.innerHTML = `${sum.toLocaleString("de-DE")} $`;
+            outorder.innerHTML = `${sum.toLocaleString("de-DE")}₫`;
+            outputprice.innerHTML = `${sum.toLocaleString("de-DE")}₫`;
         }
 
-        formCheckout.validate({
-            rules: {
-                address: "required",
-                email: "required",
-                phone: {
-                    required: true,
-                    minlength: 5,
-                },
-            },
-            messages: {
-                emailCheckOut: "Required to enter this field!",
-                address: "Required to enter this field!",
-                phone: {
-                    required: "Required to enter this field!",
-                    minlength: "Enter at least 5 characters",
-                },
-            },
-            submitHandler() {
-                async function addOder() {
-                    add({
-                        name: document.querySelector("#fullname").value,
-                        email: document.querySelector("#emailCheckOut").value,
-                        address: document.querySelector("#address").value,
-                        phone: document.querySelector("#phone").value,
-                        oderprice: outOrder.innerHTML,
-                    }).then(async () => {
-                        localStorage.removeItem("cart");
-                        toastr.success("Order has been sent");
-                    });
-                }
-                addOder();
-            },
+        const formCheckout = document.querySelector("#form-checkout");
+        // submit form
+        formCheckout.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            // Lấy giá trị của file upload cho sử dụng formData
+            add({
+                name: document.querySelector("#fullname").value,
+                email: document.querySelector("#emailCheckOut").value,
+                address: document.querySelector("#address").value,
+                phone: document.querySelector("#phone").value,
+                oderprice: outorder.innerHTML,
+
+            });
+            toastr.success("Thêm sản phẩm thành công");
         });
     },
 };
